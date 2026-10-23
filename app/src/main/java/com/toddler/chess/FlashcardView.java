@@ -2,18 +2,23 @@ package com.toddler.chess;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.RectF;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 
 import java.util.List;
 
 /**
- * Shows one big picture at a time and says its name. Tapping the picture says it again,
- * tapping anywhere else (or swiping) moves on to the next card.
+ * Shows one big picture at a time on a card and says its name. Tapping the picture says it
+ * again, tapping anywhere else (or swiping) moves on to the next card.
  */
 final class FlashcardView extends PlayView {
     private final List<Item> items;
     private final GestureDetector gestures;
+    private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final RectF card = new RectF();
     private int index;
     private long bounceStart;
     private long slideStart;
@@ -52,15 +57,25 @@ final class FlashcardView extends PlayView {
     }
 
     private float buttonRadius() {
-        return dp(34);
+        return dp(32);
     }
 
-    private float itemSize() {
-        return Math.min(getWidth() * 0.85f, getHeight() * 0.58f);
+    private void cardRect(RectF out) {
+        float w = getWidth(), h = getHeight();
+        float m = dp(16) + buttonRadius();
+        float top = m * 2 - dp(8), bottom = h - m * 2 + dp(8);
+        float maxW = w - dp(32);
+        float cw = Math.min(maxW, (bottom - top) * 0.9f);
+        if (w > h) cw = Math.min(w - 4 * m - dp(16), (bottom - top) * 1.3f);
+        out.set((w - cw) / 2f, top, (w + cw) / 2f, bottom);
     }
 
-    private float itemY() {
-        return getHeight() * 0.43f;
+    private float itemSize(RectF r) {
+        return Math.min(r.width() * 0.8f, r.height() * 0.62f);
+    }
+
+    private float itemY(RectF r) {
+        return r.top + r.height() * 0.4f;
     }
 
     private void onTap(float x, float y) {
@@ -79,8 +94,8 @@ final class FlashcardView extends PlayView {
             go(1);
             return;
         }
-        float s = itemSize();
-        if (dist(x, y, getWidth() / 2f, itemY()) < s * 0.5f) {
+        cardRect(card);
+        if (card.contains(x, y)) {
             bounceStart = now();
             burst(x, y);
             activity.chimes.ding();
@@ -111,8 +126,8 @@ final class FlashcardView extends PlayView {
     @Override
     protected void paint(Canvas c) {
         Item item = items.get(index);
-        c.drawColor(item.background);
         float w = getWidth(), h = getHeight();
+        backdrop(c, Art.tint(item.background, 0.35f), item.background);
 
         float slide = 0;
         if (slideDir != 0) {
@@ -120,24 +135,52 @@ final class FlashcardView extends PlayView {
             float ease = 1 - (1 - t) * (1 - t) * (1 - t);
             slide = slideDir * w * (1 - ease);
         }
-        long t = now();
-        float breathe = 1 + 0.025f * (float) Math.sin(t / 450.0);
-        float scale = breathe + 0.18f * bounce(bounceStart, 700);
-        float s = itemSize();
-        float cx = w / 2f + slide, cy = itemY();
 
+        cardRect(card);
+        card.offset(slide, 0);
+        float radius = dp(36);
+        paint.setColor(Color.argb(40, 60, 30, 90));
+        card.offset(0, dp(6));
+        c.drawRoundRect(card, radius, radius, paint);
+        card.offset(0, -dp(6));
+        paint.setColor(Color.WHITE);
+        c.drawRoundRect(card, radius, radius, paint);
+        float inset = dp(10);
+        card.inset(inset, inset);
+        paint.setColor(Art.tint(item.background, 0.55f));
+        c.drawRoundRect(card, radius - inset, radius - inset, paint);
+        card.inset(-inset, -inset);
+
+        float breathe = 1 + 0.025f * (float) Math.sin(now() / 450.0);
+        float scale = breathe + 0.18f * bounce(bounceStart, 700);
+        float s = itemSize(card);
+        float cx = card.centerX(), cy = itemY(card);
         c.save();
         c.scale(scale, scale, cx, cy);
         item.painter.draw(c, cx, cy, s);
         c.restore();
 
-        float labelSize = Math.min(w, h) * 0.13f;
-        Art.label(c, item.label, cx, h * 0.83f, labelSize, item.labelColor);
+        float labelSize = Math.min(card.width() * 0.16f, card.height() * 0.13f);
+        Art.label(c, item.label, cx, card.bottom - card.height() * 0.14f, labelSize, item.labelColor);
 
         float r = buttonRadius();
         float m = dp(16) + r;
         Art.homeButton(c, m, m, r);
         Art.arrowButton(c, m, h - m, r, -1);
         Art.arrowButton(c, w - m, h - m, r, 1);
+        drawProgress(c, w / 2f, h - m);
+    }
+
+    private void drawProgress(Canvas c, float cx, float cy) {
+        int n = items.size();
+        float avail = getWidth() - 4 * (dp(16) + buttonRadius());
+        float gap = Math.min(dp(16), avail / n);
+        if (gap < dp(6)) return;
+        float left = cx - gap * (n - 1) / 2f;
+        for (int i = 0; i < n; i++) {
+            boolean on = i == index;
+            paint.setColor(on ? Color.rgb(120, 90, 200) : Color.argb(90, 120, 90, 200));
+            c.drawCircle(left + i * gap, cy, on ? gap * 0.38f : gap * 0.24f, paint);
+        }
     }
 }

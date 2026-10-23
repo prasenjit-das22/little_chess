@@ -2,8 +2,11 @@ package com.toddler.chess;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.text.InputType;
 import android.view.View;
 import android.view.WindowManager;
@@ -15,23 +18,74 @@ import java.util.List;
 public class MainActivity extends Activity {
     private static final String PREFS = "little_chess";
     private static final String KEY_NAME = "child_name";
+    private static final String KEY_LANG = "language";
 
     Speaker speaker;
     Chimes chimes;
     private HomeView home;
     private View current;
     private long lastBackPress;
+    private final boolean[] warnedVoice = new boolean[3];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        speaker = new Speaker(this);
+        Lang.current = prefs().getInt(KEY_LANG, Lang.EN);
+        speaker = new Speaker(this, lang -> runOnUiThread(() -> warnMissingVoice(lang)));
+        speaker.setLanguage(Lang.current);
         chimes = new Chimes(this);
         home = new HomeView(this);
         showHome();
+        speaker.say(greeting());
+    }
+
+    private SharedPreferences prefs() {
+        return getSharedPreferences(PREFS, MODE_PRIVATE);
+    }
+
+    private String greeting() {
         String name = childName();
-        speaker.say(name.isEmpty() ? "Hello! Let's play!" : "Hello " + name + "! Let's play!");
+        String hello = Lang.t("Hello", "হ্যালো", "नमस्ते");
+        return (name.isEmpty() ? hello : hello + " " + name) + "! "
+                + Lang.t("Let's play!", "চলো খেলি!", "चलो खेलें!");
+    }
+
+    void setLanguage(int lang) {
+        Lang.current = lang;
+        prefs().edit().putInt(KEY_LANG, lang).apply();
+        chimes.next();
+        speaker.setLanguage(lang);
+        speaker.say(greeting());
+    }
+
+    /** Offers to download the voice when the phone has no Bengali or Hindi text-to-speech voice. */
+    private void warnMissingVoice(int lang) {
+        if (warnedVoice[lang] || isFinishing()) return;
+        warnedVoice[lang] = true;
+        new AlertDialog.Builder(this)
+                .setTitle(Lang.NAMES[lang] + " voice")
+                .setMessage("This phone has no " + (lang == Lang.BN ? "Bengali" : "Hindi")
+                        + " speaking voice yet. Words will show in " + Lang.NAMES[lang]
+                        + " but may be read in another voice.\n\nOpen the voice settings, choose "
+                        + "\"Speech Services by Google\" and download the "
+                        + (lang == Lang.BN ? "Bengali (India)" : "Hindi (India)") + " voice.")
+                .setPositiveButton("Get voice", (d, which) -> openVoiceInstaller())
+                .setNegativeButton("Later", null)
+                .setOnDismissListener(d -> hideSystemUi())
+                .show();
+    }
+
+    private void openVoiceInstaller() {
+        try {
+            startActivity(new Intent(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA));
+        } catch (ActivityNotFoundException e) {
+            try {
+                startActivity(new Intent("com.android.settings.TTS_SETTINGS"));
+            } catch (ActivityNotFoundException ignored) {
+                Toast.makeText(this, "Open Settings > Accessibility > Text-to-speech", Toast.LENGTH_LONG).show();
+            }
+        }
     }
 
     void showHome() {
@@ -41,6 +95,12 @@ public class MainActivity extends Activity {
 
     void openDeck(List<Item> items) {
         FlashcardView view = new FlashcardView(this, items);
+        show(view);
+        view.start();
+    }
+
+    void openMoves() {
+        MovesView view = new MovesView(this);
         show(view);
         view.start();
     }
@@ -58,7 +118,7 @@ public class MainActivity extends Activity {
     }
 
     String childName() {
-        return getSharedPreferences(PREFS, MODE_PRIVATE).getString(KEY_NAME, "");
+        return prefs().getString(KEY_NAME, "");
     }
 
     void askChildName() {
@@ -70,9 +130,8 @@ public class MainActivity extends Activity {
                 .setView(input)
                 .setPositiveButton("Save", (d, which) -> {
                     String name = input.getText().toString().trim();
-                    SharedPreferences.Editor e = getSharedPreferences(PREFS, MODE_PRIVATE).edit();
-                    e.putString(KEY_NAME, name).apply();
-                    if (!name.isEmpty()) speaker.say("Hello " + name + "!");
+                    prefs().edit().putString(KEY_NAME, name).apply();
+                    if (!name.isEmpty()) speaker.say(greeting());
                     home.invalidate();
                 })
                 .setNegativeButton("Cancel", null)

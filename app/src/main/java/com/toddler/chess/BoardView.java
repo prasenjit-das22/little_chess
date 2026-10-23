@@ -19,8 +19,9 @@ final class BoardView extends PlayView {
             Pieces.ROOK, Pieces.KNIGHT, Pieces.BISHOP, Pieces.QUEEN,
             Pieces.KING, Pieces.BISHOP, Pieces.KNIGHT, Pieces.ROOK,
     };
-    private static final int LIGHT = Color.rgb(255, 236, 200);
-    private static final int DARK = Color.rgb(196, 134, 88);
+    static final int LIGHT = Color.rgb(255, 236, 200);
+    static final int DARK = Color.rgb(196, 134, 88);
+    private static final int FRAME = Color.rgb(121, 85, 61);
 
     // Squares 0..63, row 0 at the top. Values: piece type, +6 for black pieces.
     private final int[] board = new int[64];
@@ -41,7 +42,9 @@ final class BoardView extends PlayView {
     }
 
     void start() {
-        activity.speaker.say("This is a chess board. Touch a piece!");
+        activity.speaker.say(Lang.t("This is a chess board. Touch a piece!",
+                "এটা দাবার বোর্ড। একটা ঘুঁটি ছোঁও!",
+                "यह शतरंज का बोर्ड है। किसी मोहरे को छुओ!"));
     }
 
     private void reset() {
@@ -80,7 +83,31 @@ final class BoardView extends PlayView {
     }
 
     private static String nameOf(int piece) {
-        return (piece >= 6 ? "Black " : "White ") + Pieces.NAMES[piece % 6].toLowerCase() + "!";
+        return Pieces.colorName(piece % 6, piece < 6);
+    }
+
+    /** Draws the wooden frame and the 64 squares; tint(i) may return 0 for the normal colour. */
+    static void drawBoard(Canvas c, Paint paint, RectF rect, float left, float top, float size,
+                          SquareTint tint, float density) {
+        float sq = size / 8f, f = 8 * density;
+        paint.setColor(Color.argb(50, 0, 0, 0));
+        rect.set(left - f, top - f + 5 * density, left + size + f, top + size + f + 5 * density);
+        c.drawRoundRect(rect, 2 * f, 2 * f, paint);
+        paint.setColor(FRAME);
+        rect.set(left - f, top - f, left + size + f, top + size + f);
+        c.drawRoundRect(rect, 2 * f, 2 * f, paint);
+        for (int i = 0; i < 64; i++) {
+            int row = i / 8, col = i % 8;
+            boolean light = (row + col) % 2 == 0;
+            int color = tint == null ? 0 : tint.color(i, light);
+            paint.setColor(color != 0 ? color : light ? LIGHT : DARK);
+            rect.set(left + col * sq, top + row * sq, left + (col + 1) * sq, top + (row + 1) * sq);
+            c.drawRect(rect, paint);
+        }
+    }
+
+    interface SquareTint {
+        int color(int square, boolean light);
     }
 
     @Override
@@ -155,7 +182,8 @@ final class BoardView extends PlayView {
         } else {
             reset();
             activity.chimes.next();
-            activity.speaker.say("All the pieces go back home!");
+            activity.speaker.say(Lang.t("All the pieces go back home!",
+                    "সব ঘুঁটি আবার নিজের জায়গায়!", "सारे मोहरे वापस अपनी जगह!"));
         }
     }
 
@@ -171,7 +199,7 @@ final class BoardView extends PlayView {
 
     @Override
     protected void paint(Canvas c) {
-        c.drawColor(Color.rgb(200, 230, 255));
+        backdrop(c, Color.rgb(225, 242, 255), Color.rgb(176, 214, 255));
         float w = getWidth();
         float size = boardSize(), sq = size / 8f, left = boardLeft(), top = boardTop();
 
@@ -179,24 +207,16 @@ final class BoardView extends PlayView {
         float m = dp(12) + r;
         Art.homeButton(c, m, m, r);
         Art.resetButton(c, w - m, m, r);
-        Art.label(c, "Chess board", w / 2f, topBar() / 2f + dp(4),
+        Art.label(c, Lang.t("Chess board", "দাবার বোর্ড", "शतरंज बोर्ड"), w / 2f, topBar() / 2f + dp(4),
                 Math.min(dp(40), (w - 4 * m) / 6f), Color.rgb(93, 64, 55));
 
-        paint.setColor(Color.rgb(93, 64, 55));
-        rect.set(left - dp(8), top - dp(8), left + size + dp(8), top + size + dp(8));
-        c.drawRoundRect(rect, dp(10), dp(10), paint);
-
-        for (int i = 0; i < 64; i++) {
-            int row = i / 8, col = i % 8;
-            boolean light = (row + col) % 2 == 0;
-            paint.setColor(light ? LIGHT : DARK);
-            if (i == dragFrom) paint.setColor(Color.rgb(255, 241, 118));
+        drawBoard(c, paint, rect, left, top, size, (i, light) -> {
+            if (i == dragFrom) return Color.rgb(255, 241, 118);
             if (i == flashSquare && now() - flashStart < 400) {
-                paint.setColor(light ? Color.rgb(200, 255, 200) : Color.rgb(130, 200, 120));
+                return light ? Color.rgb(200, 255, 200) : Color.rgb(130, 200, 120);
             }
-            rect.set(left + col * sq, top + row * sq, left + (col + 1) * sq, top + (row + 1) * sq);
-            c.drawRect(rect, paint);
-        }
+            return 0;
+        }, dp(1));
 
         for (int i = 0; i < 64; i++) {
             if (board[i] == EMPTY || i == dragFrom) continue;

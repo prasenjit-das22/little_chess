@@ -3,8 +3,10 @@ package com.toddler.chess;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.Shader;
 import android.os.SystemClock;
 import android.view.View;
 
@@ -31,11 +33,44 @@ abstract class PlayView extends View {
     private final Path starPath = new Path();
     private final Random random = new Random();
     private final float density;
+    private final Paint backdropPaint = new Paint();
+    private final Paint bubblePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final float[] bubbles = new float[24]; // x, y, radius, speed as fractions of the view
+    private int backdropTop, backdropBottom, backdropHeight;
 
     PlayView(Context context) {
         super(context);
         activity = (MainActivity) context;
         density = getResources().getDisplayMetrics().density;
+        for (int i = 0; i < bubbles.length; i += 4) {
+            bubbles[i] = random.nextFloat();
+            bubbles[i + 1] = random.nextFloat();
+            bubbles[i + 2] = 0.04f + random.nextFloat() * 0.08f;
+            bubbles[i + 3] = 0.01f + random.nextFloat() * 0.02f;
+        }
+    }
+
+    /** A soft vertical gradient with big translucent bubbles drifting upwards. */
+    void backdrop(Canvas c, int top, int bottom) {
+        int w = getWidth(), h = getHeight();
+        if (top != backdropTop || bottom != backdropBottom || h != backdropHeight) {
+            backdropPaint.setShader(new LinearGradient(0, 0, 0, h, top, bottom, Shader.TileMode.CLAMP));
+            backdropTop = top;
+            backdropBottom = bottom;
+            backdropHeight = h;
+        }
+        c.drawRect(0, 0, w, h, backdropPaint);
+        float t = now() / 1000f;
+        float unit = Math.min(w, h);
+        bubblePaint.setColor(Color.argb(60, 255, 255, 255));
+        for (int i = 0; i < bubbles.length; i += 4) {
+            float r = bubbles[i + 2] * unit;
+            float y = (bubbles[i + 1] - t * bubbles[i + 3]) % 1f;
+            if (y < 0) y += 1f;
+            float py = -r + y * (h + 2 * r);
+            float px = bubbles[i] * w + (float) Math.sin(t * 0.7 + i) * r * 0.5f;
+            c.drawCircle(px, py, r, bubblePaint);
+        }
     }
 
     float dp(float v) {

@@ -5,7 +5,9 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.RadialGradient;
 import android.graphics.RectF;
+import android.graphics.Shader;
 import android.graphics.Typeface;
 import android.os.Build;
 
@@ -31,7 +33,7 @@ final class Art {
         STROKE.setStrokeJoin(Paint.Join.ROUND);
         STROKE.setStrokeCap(Paint.Cap.ROUND);
         TEXT.setTextAlign(Paint.Align.CENTER);
-        TEXT.setTypeface(Typeface.create(Typeface.SANS_SERIF, Typeface.BOLD));
+        TEXT.setTypeface(Typeface.create("sans-serif-black", Typeface.NORMAL));
     }
 
     private Art() {}
@@ -110,8 +112,18 @@ final class Art {
     /** A filled, outlined shape with a happy face on it. */
     static void shape(Canvas c, int shape, int color, float cx, float cy, float s) {
         Path p = shapePath(shape, cx, cy, s);
-        FILL.setColor(color);
+        // Candy look: a radial gradient lit from the top left, plus a soft shine.
+        FILL.setShader(new RadialGradient(cx - s * 0.2f, cy - s * 0.25f, s * 0.75f,
+                tint(color, 0.45f), color, Shader.TileMode.CLAMP));
         c.drawPath(p, FILL);
+        FILL.setShader(null);
+        c.save();
+        c.clipPath(p);
+        FILL.setColor(Color.argb(90, 255, 255, 255));
+        RECT.set(cx - s * 0.36f, cy - s * 0.42f, cx - s * 0.02f, cy - s * 0.24f);
+        c.rotate(-25, RECT.centerX(), RECT.centerY());
+        c.drawOval(RECT, FILL);
+        c.restore();
         STROKE.setColor(isDark(color) ? Color.rgb(120, 120, 130) : INK);
         STROKE.setStrokeWidth(s * 0.03f);
         c.drawPath(p, STROKE);
@@ -194,7 +206,14 @@ final class Art {
 
     /** Plain text without a halo. */
     static void text(Canvas c, String text, float cx, float cy, float size, int color) {
+        text(c, text, cx, cy, size, color, Float.MAX_VALUE);
+    }
+
+    /** Plain text, shrunk if needed to fit maxWidth. */
+    static void text(Canvas c, String text, float cx, float cy, float size, int color, float maxWidth) {
         TEXT.setTextSize(size);
+        float w = TEXT.measureText(text);
+        if (w > maxWidth) TEXT.setTextSize(size * maxWidth / w);
         TEXT.setStyle(Paint.Style.FILL);
         TEXT.setColor(color);
         c.drawText(text, cx, cy - (TEXT.ascent() + TEXT.descent()) / 2f, TEXT);

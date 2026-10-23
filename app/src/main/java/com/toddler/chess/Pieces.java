@@ -9,12 +9,38 @@ import android.graphics.RectF;
 /** Chess piece silhouettes drawn as vector paths inside a 100x100 box. */
 final class Pieces {
     static final int KING = 0, QUEEN = 1, ROOK = 2, BISHOP = 3, KNIGHT = 4, PAWN = 5;
-    static final String[] NAMES = {"King", "Queen", "Rook", "Bishop", "Knight", "Pawn"};
+    private static final String[][] NAMES = {
+            {"King", "রাজা", "राजा"},
+            {"Queen", "মন্ত্রী", "रानी"},
+            {"Rook", "নৌকা", "हाथी"},
+            {"Bishop", "হাতি", "ऊँट"},
+            {"Knight", "ঘোড়া", "घोड़ा"},
+            {"Pawn", "বোড়ে", "प्यादा"},
+    };
+
+    static String name(int type) {
+        return Lang.t(NAMES[type]);
+    }
+
+    /** "White knight!" in the current language. */
+    static String colorName(int type, boolean white) {
+        String color;
+        if (white) {
+            color = Lang.t("White", "সাদা", "सफ़ेद");
+        } else {
+            // Hindi adjectives agree with gender: रानी is feminine.
+            color = Lang.t("Black", "কালো", type == QUEEN ? "काली" : "काला");
+        }
+        String name = name(type);
+        if (Lang.current == Lang.EN) name = name.toLowerCase();
+        return color + " " + name + "!";
+    }
 
     private static final Path[][] PARTS = new Path[6][];
     private static final Path[] DETAILS = new Path[6];
     private static final Paint FILL = new Paint(Paint.ANTI_ALIAS_FLAG);
     private static final Paint STROKE = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private static final RectF SHADOW = new RectF(14, 88, 86, 98);
 
     static {
         STROKE.setStyle(Paint.Style.STROKE);
@@ -177,6 +203,8 @@ final class Pieces {
         c.save();
         c.translate(cx - size / 2f, cy - size / 2f);
         c.scale(size / 100f, size / 100f);
+        FILL.setColor(Color.argb(45, 0, 0, 0));
+        c.drawOval(SHADOW, FILL);
         FILL.setColor(fill);
         STROKE.setColor(outline);
         for (Path p : PARTS[type]) {
