@@ -1,0 +1,109 @@
+# emoji | English | fact | Bengali | fact | Hindi | fact
+# Toys
+⚽|Ball|Bounce bounce! Kick it.|বল|লাফায়! পা দিয়ে মারো।|गेंद|उछलती है! किक मारो।
+🧸|Teddy|A teddy bear. Cuddle!|টেডি|টেডি ভালুক। জড়িয়ে ধরো!|टेडी|टेडी भालू। गले लगाओ!
+🎈|Balloon|Up, up, up!|বেলুন|উপরে উপরে উড়ে যায়!|गुब्बारा|ऊपर ऊपर ऊपर!
+🪁|Kite|Fly the kite high!|ঘুড়ি|ঘুড়ি ওড়াও! ভোকাট্টা!|पतंग|पतंग उड़ाओ!
+🎲|Dice|Roll the dice!|লুডোর ছক্কা|ছক্কা চালো!|पासा|पासा फेंको!
+🧩|Puzzle|Fit the pieces.|ধাঁধা|টুকরো মেলাও।|पहेली|टुकड़े जोड़ो।
+🪆|Doll|A doll inside a doll!|পুতুল|পুতুলের ভেতর পুতুল!|गुड़िया|गुड़िया में गुड़िया!
+🎁|Present|A surprise for you!|উপহার|তোমার জন্য চমক!|तोहफ़ा|तुम्हारे लिए तोहफ़ा!
+🎨|Paints|Let's paint a picture.|রং-তুলি|চলো ছবি আঁকি।|रंग|चलो चित्र बनाएँ।
+🖍️|Crayon|Draw and colour.|মোম রং|আঁকো আর রং করো।|क्रेयॉन|बनाओ और रंग भरो।
+🛝|Slide|Wheee, down the slide!|স্লিপ|সুড়ুৎ করে নামো!|फिसलपट्टी|फिसलो वी!
+🎡|Ferris wheel|Round and round at the fair.|নাগরদোলা|মেলায় ঘুরে ঘুরে।|झूला|मेले में गोल गोल।
+🎪|Circus|Clowns and fun!|সার্কাস|জোকার আর মজা!|सर्कस|जोकर और मस्ती!
+# Home
+🏠|House|Home sweet home.|বাড়ি|আমাদের বাড়ি।|घर|प्यारा घर।
+🚪|Door|Knock knock! Open the door.|দরজা|ঠক ঠক! দরজা খোলো।|दरवाज़ा|खट खट! दरवाज़ा खोलो।
+🪟|Window|Look out of the window.|জানালা|জানালা দিয়ে দেখো।|खिड़की|खिड़की से देखो।
+🛏️|Bed|Night night, time to sleep.|বিছানা|ঘুমের সময় হল।|बिस्तर|सोने का समय।
+🪑|Chair|Sit on the chair.|চেয়ার|চেয়ারে বসো।|कुर्सी|कुर्सी पर बैठो।
+🛋️|Sofa|A comfy sofa.|সোফা|আরামের সোফা।|सोफ़ा|आरामदायक सोफ़ा।
+🛁|Bathtub|Splash splash, bath time!|বাথটাব|ঝপাং! চান করার সময়।|बाथटब|छपाक! नहाने का समय।
+🧼|Soap|Bubbles! Wash your hands.|সাবান|ফেনা! হাত ধোও।|साबुन|झाग! हाथ धोओ।
+🪥|Toothbrush|Brush brush your teeth.|দাঁত মাজার ব্রাশ|দাঁত মাজো!|टूथब्रश|दाँत साफ़ करो!
+🪞|Mirror|Who is that? It's you!|আয়না|ওটা কে? তুমি!|आईना|वो कौन? तुम!
+🧹|Broom|Sweep sweep!|ঝাঁটা|ঝাঁট দাও!|झाड़ू|झाड़ू लगाओ!
+🪣|Bucket|A bucket of water.|বালতি|এক বালতি জল।|बाल्टी|बाल्टी भर पानी।
+🧺|Basket|Put things in the basket.|ঝুড়ি|ঝুড়িতে রাখো।|टोकरी|टोकरी में रखो।
+🕯️|Candle|A little flame.|মোমবাতি|ছোট্ট আলো।|मोमबत्ती|छोटी सी लौ।
+🪔|Lamp|A clay lamp for festivals.|প্রদীপ|উৎসবের প্রদীপ।|दीया|त्योहार का दीया।
+💡|Light bulb|Click! Lights on.|বাল্ব|খুট! আলো জ্বলল।|बल्ब|खट! बत्ती जली।
+🔦|Torch|Light in the dark.|টর্চ|অন্ধকারে আলো।|टॉर्च|अँधेरे में रोशनी।
+⏰|Clock|Tick tock, tick tock.|ঘড়ি|টিক টিক টিক টিক।|घड़ी|टिक टिक टिक टिक।
+☂️|Umbrella|Rain, rain! Open the umbrella.|ছাতা|বৃষ্টি এল! ছাতা খোলো।|छाता|बारिश आई! छाता खोलो।
+🔑|Key|Open the lock.|চাবি|তালা খোলো।|चाबी|ताला खोलो।
+📺|Television|Watch a little TV.|টিভি|একটু টিভি দেখি।|टीवी|थोड़ा टीवी देखें।
+📱|Phone|Ring ring! Hello!|ফোন|ক্রিং ক্রিং! হ্যালো!|फ़ोन|ट्रिन ट्रिन! हैलो!
+💻|Computer|Tap tap on the keys.|কম্পিউটার|টক টক করে টাইপ।|कंप्यूटर|टक टक टाइप।
+📷|Camera|Smile! Click!|ক্যামেরা|হাসো! ক্লিক!|कैमरा|मुस्कुराओ! क्लिक!
+🪴|Potted plant|Water the plant.|টবের গাছ|গাছে জল দাও।|गमला|पौधे को पानी दो।
+# Kitchen
+🥄|Spoon|Eat with a spoon.|চামচ|চামচ দিয়ে খাও।|चम्मच|चम्मच से खाओ।
+🍴|Fork|A fork and knife.|কাঁটা চামচ|কাঁটা চামচ আর ছুরি।|काँटा|काँटा और छुरी।
+☕|Cup|A cup with a handle.|কাপ|হাতলওয়ালা কাপ।|कप|हैंडल वाला कप।
+🍽️|Plate|Food on the plate.|থালা|থালায় খাবার।|थाली|थाली में खाना।
+🫖|Teapot|Pour the tea.|কেটলি|চা ঢালো।|केतली|चाय डालो।
+🍼|Bottle|Milk time.|বোতল|দুধ খাওয়ার সময়।|बोतल|दूध का समय।
+# Clothes
+👕|T-shirt|Put on your shirt.|জামা|জামা পরো।|कमीज़|कमीज़ पहनो।
+👖|Trousers|Blue jeans.|প্যান্ট|নীল প্যান্ট।|पैंट|नीली पैंट।
+👗|Dress|A pretty dress.|ফ্রক|সুন্দর ফ্রক।|फ़्रॉक|सुंदर फ़्रॉक।
+🥻|Sari|A beautiful sari.|শাড়ি|সুন্দর শাড়ি।|साड़ी|सुंदर साड़ी।
+🩳|Shorts|Short pants for summer.|হাফপ্যান্ট|গরমের হাফপ্যান্ট।|निक्कर|गर्मी की निक्कर।
+🧦|Socks|Two socks for two feet.|মোজা|দুই পায়ে দুটো মোজা।|मोज़े|दो पैरों के दो मोज़े।
+👟|Shoes|Put on your shoes.|জুতো|জুতো পরো।|जूते|जूते पहनो।
+🩴|Sandals|Flip flop, flip flop.|চটি|চটর পটর।|चप्पल|चट पट चप्पल।
+🧢|Cap|A cap for the sun.|টুপি|রোদের টুপি।|टोपी|धूप की टोपी।
+🧣|Scarf|Warm and cosy.|মাফলার|গরম মাফলার।|मफ़लर|गरम मफ़लर।
+🧥|Coat|A coat for winter.|কোট|শীতের কোট।|कोट|सर्दी का कोट।
+👓|Glasses|See clearly!|চশমা|পরিষ্কার দেখো!|चश्मा|साफ़ देखो!
+🎒|School bag|Ready for school!|ব্যাগ|স্কুলে যাওয়ার ব্যাগ!|बस्ता|स्कूल का बस्ता!
+👑|Crown|A king's crown.|মুকুট|রাজার মুকুট।|मुकुट|राजा का मुकुट।
+⌚|Watch|A watch on your wrist.|হাতঘড়ি|হাতের ঘড়ি।|घड़ी|कलाई की घड़ी।
+# School
+📚|Books|Let's read a story.|বই|চলো গল্প পড়ি।|किताब|चलो कहानी पढ़ें।
+✏️|Pencil|Write and draw.|পেনসিল|লেখো আর আঁকো।|पेंसिल|लिखो और बनाओ।
+🖊️|Pen|Write a letter.|কলম|চিঠি লেখো।|क़लम|चिट्ठी लिखो।
+📏|Ruler|Draw a straight line.|স্কেল|সোজা দাগ টানো।|पैमाना|सीधी लकीर खींचो।
+✂️|Scissors|Snip snip!|কাঁচি|কচ কচ!|कैंची|कच कच!
+📒|Notebook|Write in the notebook.|খাতা|খাতায় লেখো।|कॉपी|कॉपी में लिखो।
+🧮|Abacus|Count the beads.|অ্যাবাকাস|পুঁতি গোনো।|गिनतारा|मनके गिनो।
+🌍|Globe|Our world!|পৃথিবী|আমাদের পৃথিবী!|पृथ्वी|हमारी दुनिया!
+🏫|School|Let's go to school!|স্কুল|চলো স্কুলে যাই!|स्कूल|चलो स्कूल चलें!
+✉️|Letter|A letter in the post.|চিঠি|ডাকে চিঠি এল।|चिट्ठी|डाक से चिट्ठी।
+# Tools
+🔨|Hammer|Bang bang!|হাতুড়ি|ঠুক ঠুক!|हथौड़ा|ठक ठक!
+🪜|Ladder|Climb up!|মই|উপরে ওঠো!|सीढ़ी|ऊपर चढ़ो!
+# Nature
+🌳|Tree|A tall tree.|গাছ|বড় গাছ।|पेड़|ऊँचा पेड़।
+🌴|Palm tree|A tall palm tree.|তালগাছ|ঐ দেখা যায় তালগাছ!|ताड़ का पेड़|ऊँचा ताड़ का पेड़।
+🌸|Flower|Smell the flower.|ফুল|ফুলের গন্ধ নাও।|फूल|फूल सूँघो।
+🌹|Rose|A red rose.|গোলাপ|লাল গোলাপ।|गुलाब|लाल गुलाब।
+🌻|Sunflower|It looks at the sun.|সূর্যমুখী|সূর্যের দিকে তাকায়।|सूरजमुखी|सूरज को देखता है।
+🪷|Lotus|A lotus on the pond.|পদ্ম|পুকুরে পদ্মফুল।|कमल|तालाब में कमल।
+🌵|Cactus|Prickly cactus.|ক্যাকটাস|কাঁটাওয়ালা গাছ।|कैक्टस|काँटेदार पौधा।
+🍁|Leaf|A falling leaf.|পাতা|ঝরা পাতা।|पत्ता|गिरता पत्ता।
+☀️|Sun|Hello sunshine!|সূর্য|সুপ্রভাত সূর্যিমামা!|सूरज|नमस्ते सूरज!
+🌙|Moon|Good night, moon.|চাঁদ|আয় আয় চাঁদ মামা!|चाँद|चंदा मामा!
+⭐|Star|Twinkle twinkle!|তারা|মিটমিট করে!|तारा|टिमटिम!
+☁️|Cloud|A fluffy cloud.|মেঘ|তুলোর মতো মেঘ।|बादल|रुई जैसा बादल।
+🌧️|Rain|Pitter patter!|বৃষ্টি|বৃষ্টি পড়ে টাপুর টুপুর!|बारिश|टिप टिप बारिश!
+⛈️|Thunder|Boom! Thunder.|বজ্রপাত|গুড়ুম গুড়ুম!|बादल गरजा|गड़ गड़!
+🌈|Rainbow|Seven colours!|রামধনু|সাত রঙের রামধনু!|इंद्रधनुष|सात रंग!
+❄️|Snow|Cold white snow.|তুষার|ঠান্ডা সাদা তুষার।|बर्फ़|ठंडी सफ़ेद बर्फ़।
+⛄|Snowman|A snowman with a carrot nose.|বরফের মানুষ|গাজরের নাক!|बर्फ़ का आदमी|गाजर की नाक!
+🔥|Fire|Hot! Don't touch.|আগুন|গরম! ছুঁয়ো না।|आग|गरम! मत छुओ।
+🌊|Sea|Big waves! Whoosh!|সমুদ্র|বড় বড় ঢেউ!|समुद्र|बड़ी बड़ी लहरें!
+⛰️|Mountain|A big, tall mountain.|পাহাড়|উঁচু পাহাড়।|पहाड़|ऊँचा पहाड़।
+🌋|Volcano|Rumble rumble!|আগ্নেয়গিরি|গুড়গুড় গুড়গুড়!|ज्वालामुखी|गड़गड़ाहट!
+🏝️|Island|Land in the sea.|দ্বীপ|সমুদ্রের মাঝে ডাঙা।|द्वीप|समुद्र में ज़मीन।
+# Places and festivals
+🛕|Temple|A temple with bells.|মন্দির|ঘণ্টা বাজে মন্দিরে।|मंदिर|मंदिर में घंटी।
+🕌|Mosque|A mosque with a dome.|মসজিদ|গম্বুজওয়ালা মসজিদ।|मस्जिद|गुंबद वाली मस्जिद।
+⛪|Church|A church with a bell.|গির্জা|ঘণ্টাওয়ালা গির্জা।|चर्च|घंटी वाला चर्च।
+🏥|Hospital|Doctors help us here.|হাসপাতাল|এখানে ডাক্তার সারিয়ে তোলেন।|अस्पताल|यहाँ डॉक्टर मदद करते हैं।
+🏰|Castle|A castle for a king.|রাজপ্রাসাদ|রাজার প্রাসাদ।|महल|राजा का महल।
+🎆|Fireworks|Boom! Colours in the sky.|আতশবাজি|আকাশে রঙের খেলা!|आतिशबाज़ी|आसमान में रंग!
+🎉|Party|Hooray, a party!|উৎসব|হুররে! মজা!|पार्टी|हुर्रे! पार्टी!

@@ -1,0 +1,27 @@
+# emoji | English | fact | Bengali | fact | Hindi | fact
+👀|Eyes|Blink blink! We see with our eyes.|চোখ|পিটপিট! চোখ দিয়ে দেখি।|आँखें|झपक झपक! आँखों से देखते हैं।
+👂|Ear|We hear with our ears.|কান|কান দিয়ে শুনি।|कान|कान से सुनते हैं।
+👃|Nose|Sniff sniff! We smell with our nose.|নাক|শুঁকে শুঁকে! নাক দিয়ে গন্ধ নিই।|नाक|सूँघो! नाक से सूँघते हैं।
+👄|Mouth|Open wide! Yum yum.|মুখ|হাঁ করো! মজা করে খাই।|मुँह|मुँह खोलो! यम यम।
+👅|Tongue|Stick out your tongue!|জিভ|জিভ বের করো!|जीभ|जीभ बाहर निकालो!
+🦷|Teeth|Brush your teeth!|দাঁত|দাঁত মাজো!|दाँत|दाँत साफ़ करो!
+💋|Lips|Mwah! A kiss.|ঠোঁট|হামি!|होंठ|पुच्ची!
+💇|Hair|Comb your hair.|চুল|চুল আঁচড়াও।|बाल|बाल सँवारो।
+😊|Face|A happy, smiley face!|মুখ|হাসিখুশি মুখ!|चेहरा|मुस्कुराता चेहरा!
+✋|Hand|High five!|হাত|হাতে হাত মেলাও!|हाथ|हाथ मिलाओ!
+☝️|Finger|One finger. Point!|আঙুল|একটা আঙুল। দেখাও!|उँगली|एक उँगली। दिखाओ!
+👍|Thumb|Thumbs up! Well done!|বুড়ো আঙুল|দারুণ!|अँगूठा|शाबाश!
+💪|Arm|Strong arms!|হাত|শক্তিশালী হাত!|बाँह|मज़बूत बाँहें!
+🦵|Leg|Walk walk walk!|পা|হাঁটি হাঁটি পা পা!|टाँग|चलो चलो चलो!
+🦶|Foot|Wiggle your toes!|পায়ের পাতা|পায়ের আঙুল নাড়াও!|पैर|पैर की उँगलियाँ हिलाओ!
+💅|Nails|Little nails.|নখ|ছোট্ট নখ।|नाख़ून|छोटे नाख़ून।
+🧠|Brain|We think with our brain.|মস্তিষ্ক|মাথা দিয়ে ভাবি।|दिमाग़|दिमाग़ से सोचते हैं।
+🫀|Heart|Thump thump, thump thump.|হৃৎপিণ্ড|ধুকপুক ধুকপুক।|दिल|धक धक, धक धक।
+🫁|Lungs|Breathe in, breathe out.|ফুসফুস|শ্বাস নাও, শ্বাস ছাড়ো।|फेफड़े|साँस लो, साँस छोड़ो।
+🦴|Bone|Bones make us strong.|হাড়|হাড় আমাদের শক্ত রাখে।|हड्डी|हड्डियाँ हमें मज़बूत रखती हैं।
+👏|Clap|Clap clap clap!|হাততালি|হাততালি দাও!|ताली|ताली बजाओ!
+👋|Wave|Wave hello! Ta-ta!|টা-টা|হাত নেড়ে টা-টা!|टाटा|हाथ हिलाकर टाटा!
+🤗|Hug|A big warm hug!|আদর|জড়িয়ে ধরে আদর!|झप्पी|प्यारी सी झप्पी!
+😴|Sleep|Shh... sleepy time.|ঘুম|চুপ... ঘুমের সময়।|नींद|श्श... सोने का समय।
+😂|Laugh|Ha ha ha!|হাসি|হা হা হা!|हँसी|हा हा हा!
+🤧|Sneeze|Achoo! Bless you!|হাঁচি|হাঁচ্চো!|छींक|आक्छू!

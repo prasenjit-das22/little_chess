@@ -9,10 +9,14 @@ import java.util.List;
 
 /** All the flash card decks, built in the current language. */
 final class Decks {
+    static final int ANIMALS = 0, BIRDS = 1, FOOD = 2, THINGS = 3, VEHICLES = 4, BODY = 5,
+            COLORS = 6, SHAPES = 7, NUMBERS = 8, LETTERS = 9, ABC = 10, RHYMES = 11, PIECES = 12;
+
     private static final int[] PASTELS = {
             Color.rgb(255, 236, 179), Color.rgb(200, 230, 255), Color.rgb(220, 245, 210),
             Color.rgb(255, 214, 230), Color.rgb(232, 220, 255), Color.rgb(255, 224, 204),
     };
+    private static final int INK = Color.rgb(60, 36, 90);
 
     private Decks() {}
 
@@ -20,8 +24,31 @@ final class Decks {
         return PASTELS[i % PASTELS.length];
     }
 
+    static List<Item> deck(int id) {
+        switch (id) {
+            case ANIMALS: return listDeck("animals.txt");
+            case BIRDS: return listDeck("birds.txt");
+            case FOOD: return listDeck("food.txt");
+            case THINGS: return listDeck("things.txt");
+            case VEHICLES: return listDeck("vehicles.txt");
+            case BODY: return listDeck("body.txt");
+            case COLORS: return colors();
+            case SHAPES: return shapes();
+            case NUMBERS: return numbers();
+            case LETTERS: return bengaliLetters();
+            case ABC: return abc();
+            case RHYMES: return rhymes();
+            default: return pieces();
+        }
+    }
+
+    /** The second word on a card: Bengali, or English when the app is in Bengali. */
+    private static String sub(String en, String bn) {
+        return Lang.current == Lang.BN ? en : bn;
+    }
+
     // Each row: color, emoji, then {label, speech} for English, Bengali, Hindi.
-    private static final Object[][] COLORS = {
+    private static final Object[][] COLORS_DATA = {
             {Color.rgb(229, 57, 53), "🍎",
                     "Red", "Red! A red apple.", "লাল", "লাল! লাল আপেল।", "लाल", "लाल! लाल सेब।"},
             {Color.rgb(251, 140, 0), "🍊",
@@ -32,12 +59,16 @@ final class Decks {
                     "Green", "Green! A green frog.", "সবুজ", "সবুজ! সবুজ ব্যাঙ।", "हरा", "हरा! हरा मेंढक।"},
             {Color.rgb(30, 136, 229), "🐳",
                     "Blue", "Blue! A blue whale.", "নীল", "নীল! নীল তিমি।", "नीला", "नीला! नीली व्हेल।"},
+            {Color.rgb(79, 195, 247), "🦋",
+                    "Sky blue", "Sky blue! Like the sky.", "আকাশি", "আকাশি! আকাশের রং।", "आसमानी", "आसमानी! आसमान का रंग।"},
             {Color.rgb(142, 36, 170), "🍇",
                     "Purple", "Purple! Purple grapes.", "বেগুনি", "বেগুনি! বেগুনি আঙুর।", "बैंगनी", "बैंगनी! बैंगनी अंगूर।"},
             {Color.rgb(240, 98, 146), "🌸",
                     "Pink", "Pink! A pink flower.", "গোলাপি", "গোলাপি! গোলাপি ফুল।", "गुलाबी", "गुलाबी! गुलाबी फूल।"},
             {Color.rgb(121, 85, 72), "🐻",
                     "Brown", "Brown! A brown bear.", "বাদামি", "বাদামি! বাদামি ভালুক।", "भूरा", "भूरा! भूरा भालू।"},
+            {Color.rgb(144, 144, 150), "🐘",
+                    "Grey", "Grey! A grey elephant.", "ধূসর", "ধূসর! ধূসর হাতি।", "स्लेटी", "स्लेटी! स्लेटी हाथी।"},
             {Color.rgb(33, 33, 33), null,
                     "Black", "Black! Like the black chess pieces.", "কালো", "কালো! কালো দাবার ঘুঁটি।", "काला", "काला! काले मोहरे।"},
             {Color.WHITE, "☁️",
@@ -46,24 +77,26 @@ final class Decks {
 
     static List<Item> colors() {
         List<Item> items = new ArrayList<>();
-        for (Object[] d : COLORS) {
+        for (Object[] d : COLORS_DATA) {
             final int color = (Integer) d[0];
             final String emoji = (String) d[1];
             int bg = color == Color.WHITE ? Color.rgb(176, 214, 255)
                     : Art.isDark(color) ? Color.rgb(225, 225, 235) : Art.tint(color, 0.75f);
-            items.add(new Item(pick(d, 2), pick(d, 3), color, bg, (c, cx, cy, s) -> {
+            Item it = new Item(pick(d, 2), pick(d, 3), color, bg, (c, cx, cy, s) -> {
                 Art.shape(c, Art.CIRCLE, color, cx - s * 0.12f, cy, s * 0.8f);
                 if (emoji == null) {
                     Pieces.draw(c, Pieces.KING, false, cx + s * 0.32f, cy + s * 0.2f, s * 0.42f);
                 } else {
                     Art.emoji(c, emoji, cx + s * 0.32f, cy + s * 0.25f, s * 0.36f);
                 }
-            }));
+            });
+            it.sub = sub((String) d[2], (String) d[4]);
+            items.add(it);
         }
         return items;
     }
 
-    private static final Object[][] SHAPES = {
+    private static final Object[][] SHAPES_DATA = {
             {Art.CIRCLE, Color.rgb(229, 57, 53),
                     "Circle", "Circle! Round and round.", "বৃত্ত", "বৃত্ত! গোল গোল।", "गोला", "गोला! गोल गोल।"},
             {Art.SQUARE, Color.rgb(30, 136, 229),
@@ -75,119 +108,85 @@ final class Decks {
             {Art.HEART, Color.rgb(240, 98, 146),
                     "Heart", "Heart! I love you.", "হৃদয়", "হৃদয়! তোমায় খুব ভালোবাসি।", "दिल", "दिल! मुझे तुमसे प्यार है।"},
             {Art.RECTANGLE, Color.rgb(251, 140, 0),
-                    "Rectangle", "Rectangle!", "আয়তক্ষেত্র", "আয়তক্ষেত্র!", "आयत", "आयत!"},
+                    "Rectangle", "Rectangle! Two long sides, two short sides.", "আয়তক্ষেত্র", "আয়তক্ষেত্র! দুটো লম্বা, দুটো ছোট বাহু।", "आयत", "आयत! दो लंबी, दो छोटी भुजाएँ।"},
             {Art.OVAL, Color.rgb(142, 36, 170),
                     "Oval", "Oval! Like an egg.", "ডিম্বাকার", "ডিম্বাকার! ডিমের মতো।", "अंडाकार", "अंडाकार! अंडे जैसा।"},
             {Art.DIAMOND, Color.rgb(0, 172, 193),
-                    "Diamond", "Diamond!", "হীরা", "হীরা!", "हीरा", "हीरा!"},
+                    "Diamond", "Diamond! Shiny like a kite.", "রম্বস", "রম্বস! ঘুড়ির মতো।", "हीरा", "हीरा! पतंग जैसा।"},
     };
 
     static List<Item> shapes() {
         List<Item> items = new ArrayList<>();
-        for (int i = 0; i < SHAPES.length; i++) {
-            Object[] d = SHAPES[i];
+        for (int i = 0; i < SHAPES_DATA.length; i++) {
+            Object[] d = SHAPES_DATA[i];
             final int shape = (Integer) d[0];
             final int color = (Integer) d[1];
-            items.add(new Item(pick(d, 2), pick(d, 3), color, pastel(i),
-                    (c, cx, cy, s) -> Art.shape(c, shape, color, cx, cy, s)));
+            Item it = new Item(pick(d, 2), pick(d, 3), color, pastel(i),
+                    (c, cx, cy, s) -> Art.shape(c, shape, color, cx, cy, s));
+            it.sub = sub((String) d[2], (String) d[4]);
+            items.add(it);
         }
         return items;
     }
 
-    // Each row: emoji, then label and speech for English, Bengali, Hindi.
-    private static final String[][] ANIMALS = {
-            {"🐶", "Dog", "Dog! Woof woof!", "কুকুর", "কুকুর! ঘেউ ঘেউ!", "कुत्ता", "कुत्ता! भौं भौं!"},
-            {"🐱", "Cat", "Cat! Meow!", "বিড়াল", "বিড়াল! মিয়াও!", "बिल्ली", "बिल्ली! म्याऊँ!"},
-            {"🐮", "Cow", "Cow! Moo!", "গরু", "গরু! হাম্বা!", "गाय", "गाय! मूँ!"},
-            {"🦆", "Duck", "Duck! Quack quack!", "হাঁস", "হাঁস! প্যাঁক প্যাঁক!", "बत्तख", "बत्तख! क्वैक क्वैक!"},
-            {"🐑", "Sheep", "Sheep! Baa baa!", "ভেড়া", "ভেড়া! ভ্যা ভ্যা!", "भेड़", "भेड़! मैं मैं!"},
-            {"🐴", "Horse", "Horse! Neigh!", "ঘোড়া", "ঘোড়া! চিঁহিঁ!", "घोड़ा", "घोड़ा! हिनहिन!"},
-            {"🦁", "Lion", "Lion! Roar!", "সিংহ", "সিংহ! হালুম!", "शेर", "शेर! दहाड़!"},
-            {"🐯", "Tiger", "Tiger! Grrr!", "বাঘ", "বাঘ! হালুম হালুম!", "बाघ", "बाघ! गुर्र!"},
-            {"🐘", "Elephant", "Elephant! Big ears and a long trunk.", "হাতি", "হাতি! লম্বা শুঁড়!", "हाथी", "हाथी! लंबी सूँड!"},
-            {"🐵", "Monkey", "Monkey! Ooh ooh, ah ah!", "বানর", "বানর! উপ উপ!", "बंदर", "बंदर! ऊ ऊ आ आ!"},
-            {"🐦", "Bird", "Bird! Tweet tweet!", "পাখি", "পাখি! কিচির মিচির!", "चिड़िया", "चिड़िया! चीं चीं!"},
-            {"🐟", "Fish", "Fish! Swim swim.", "মাছ", "মাছ! সাঁতার কাটে।", "मछली", "मछली! तैरती है।"},
-            {"🐸", "Frog", "Frog! Ribbit!", "ব্যাঙ", "ব্যাঙ! ঘ্যাঙর ঘ্যাং!", "मेंढक", "मेंढक! टर्र टर्र!"},
-            {"🐔", "Chicken", "Chicken! Cluck cluck!", "মুরগি", "মুরগি! কক কক!", "मुर्गी", "मुर्गी! कुट कुट!"},
-            {"🐝", "Bee", "Bee! Buzz buzz!", "মৌমাছি", "মৌমাছি! ভোঁ ভোঁ!", "मधुमक्खी", "मधुमक्खी! भिन भिन!"},
-            {"🐰", "Bunny", "Bunny! Hop hop hop!", "খরগোশ", "খরগোশ! লাফ লাফ!", "खरगोश", "खरगोश! उछल उछल!"},
-            {"🐻", "Bear", "Bear! Big hug!", "ভালুক", "ভালুক! বড় আদর!", "भालू", "भालू! बड़ी झप्पी!"},
-            {"🐢", "Turtle", "Turtle! Slow and steady.", "কচ্ছপ", "কচ্ছপ! আস্তে আস্তে।", "कछुआ", "कछुआ! धीरे धीरे।"},
-    };
-
-    static List<Item> animals() {
-        return emojiDeck(ANIMALS);
-    }
-
-    private static final String[][] THINGS = {
-            {"🍎", "Apple", "Apple! Crunch crunch.", "আপেল", "আপেল! কচর মচর।", "सेब", "सेब! कुरकुरा।"},
-            {"🍌", "Banana", "Banana! Yummy.", "কলা", "কলা! খুব মজা।", "केला", "केला! बहुत स्वादिष्ट।"},
-            {"🥭", "Mango", "Mango! Sweet mango.", "আম", "আম! মিষ্টি আম।", "आम", "आम! मीठा आम।"},
-            {"🍓", "Strawberry", "Strawberry!", "স্ট্রবেরি", "স্ট্রবেরি!", "स्ट्रॉबेरी", "स्ट्रॉबेरी!"},
-            {"🥕", "Carrot", "Carrot!", "গাজর", "গাজর!", "गाजर", "गाजर!"},
-            {"🍪", "Cookie", "Cookie! Nom nom nom.", "বিস্কুট", "বিস্কুট! মজা মজা।", "बिस्कुट", "बिस्कुट! मज़ेदार।"},
-            {"🍼", "Bottle", "Bottle! Milk time.", "বোতল", "বোতল! দুধ খাওয়ার সময়।", "बोतल", "बोतल! दूध का समय।"},
-            {"⚽", "Ball", "Ball! Bounce bounce.", "বল", "বল! লাফায়।", "गेंद", "गेंद! उछलती है।"},
-            {"🧸", "Teddy", "Teddy bear! Cuddle.", "টেডি", "টেডি! জড়িয়ে ধরো।", "टेडी", "टेडी! गले लगाओ।"},
-            {"🎈", "Balloon", "Balloon! Up, up, up!", "বেলুন", "বেলুন! উপরে উপরে!", "गुब्बारा", "गुब्बारा! ऊपर ऊपर!"},
-            {"📚", "Book", "Book! Let's read.", "বই", "বই! চলো পড়ি।", "किताब", "किताब! चलो पढ़ें।"},
-            {"👟", "Shoe", "Shoe! Put on your shoes.", "জুতো", "জুতো! জুতো পরো।", "जूता", "जूता! जूते पहनो।"},
-            {"🎩", "Hat", "Hat!", "টুপি", "টুপি!", "टोपी", "टोपी!"},
-            {"🥄", "Spoon", "Spoon!", "চামচ", "চামচ!", "चम्मच", "चम्मच!"},
-            {"☕", "Cup", "Cup!", "কাপ", "কাপ!", "कप", "कप!"},
-            {"🛏️", "Bed", "Bed! Night night.", "বিছানা", "বিছানা! ঘুমের সময়।", "बिस्तर", "बिस्तर! सोने का समय।"},
-            {"🚗", "Car", "Car! Beep beep!", "গাড়ি", "গাড়ি! পিপ পিপ!", "गाड़ी", "गाड़ी! पीं पीं!"},
-            {"🚌", "Bus", "Bus! The wheels go round and round.", "বাস", "বাস! চাকা ঘোরে।", "बस", "बस! पहिए घूमते हैं।"},
-            {"🚂", "Train", "Train! Choo choo!", "ট্রেন", "ট্রেন! কু ঝিক ঝিক!", "रेलगाड़ी", "रेलगाड़ी! छुक छुक!"},
-            {"✈️", "Airplane", "Airplane! Zoom!", "উড়োজাহাজ", "উড়োজাহাজ! শোঁ শোঁ!", "हवाई जहाज़", "हवाई जहाज़! ज़ूम!"},
-            {"⛵", "Boat", "Boat! Splash.", "নৌকা", "নৌকা! ছলাৎ ছলাৎ।", "नाव", "नाव! छप छप।"},
-            {"🏠", "House", "House! Home sweet home.", "বাড়ি", "বাড়ি! আমাদের বাড়ি।", "घर", "घर! प्यारा घर।"},
-            {"🌳", "Tree", "Tree! Tall tree.", "গাছ", "গাছ! বড় গাছ।", "पेड़", "पेड़! ऊँचा पेड़।"},
-            {"🌸", "Flower", "Flower! Smell the flower.", "ফুল", "ফুল! ফুলের গন্ধ নাও।", "फूल", "फूल! फूल सूँघो।"},
-            {"☀️", "Sun", "Sun! Hello sunshine.", "সূর্য", "সূর্য! সুপ্রভাত।", "सूरज", "सूरज! नमस्ते सूरज।"},
-            {"🌙", "Moon", "Moon! Good night moon.", "চাঁদ", "চাঁদ! চাঁদ মামা।", "चाँद", "चाँद! चंदा मामा।"},
-            {"⭐", "Star", "Star! Twinkle twinkle.", "তারা", "তারা! মিটমিট।", "तारा", "तारा! टिमटिम।"},
-    };
-
-    static List<Item> things() {
-        return emojiDeck(THINGS);
-    }
-
-    private static final String[] COUNT_EMOJI = {"☀️", "⚽", "🦆", "🍎", "⭐"};
+    private static final String[] COUNT_EMOJI = {"☀️", "⚽", "🦆", "🍎", "⭐", "🎈", "🐟", "🌸", "🍌", "🐞"};
     private static final String[][] COUNT_NOUNS = {
             {"One sun!", "একটা সূর্য!", "एक सूरज!"},
             {"Two balls!", "দুটো বল!", "दो गेंदें!"},
             {"Three ducks!", "তিনটে হাঁস!", "तीन बत्तखें!"},
             {"Four apples!", "চারটে আপেল!", "चार सेब!"},
             {"Five stars!", "পাঁচটা তারা!", "पाँच तारे!"},
+            {"Six balloons!", "ছ'টা বেলুন!", "छह गुब्बारे!"},
+            {"Seven fish!", "সাতটা মাছ!", "सात मछलियाँ!"},
+            {"Eight flowers!", "আটটা ফুল!", "आठ फूल!"},
+            {"Nine bananas!", "ন'টা কলা!", "नौ केले!"},
+            {"Ten ladybugs!", "দশটা লেডিবাগ!", "दस लेडीबग!"},
     };
 
     static List<Item> numbers() {
         List<Item> items = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 10; i++) {
             final int n = i + 1;
             final String e = COUNT_EMOJI[i];
             StringBuilder speech = new StringBuilder();
             for (int k = 1; k <= n; k++) speech.append(Lang.number(k)).append("... ");
             speech.append(Lang.t(COUNT_NOUNS[i]));
-            items.add(new Item(Lang.digit(n), speech.toString(), Color.rgb(120, 90, 200), pastel(i),
-                    (c, cx, cy, s) -> drawCount(c, e, n, cx, cy, s)));
+            Item it = new Item(Lang.digit(n), speech.toString(), Color.rgb(120, 90, 200), pastel(i),
+                    (c, cx, cy, s) -> drawCount(c, e, n, cx, cy, s));
+            it.sub = Lang.current == Lang.BN ? Lang.numberIn(n, Lang.EN) : Lang.numberIn(n, Lang.BN);
+            it.ask = Lang.number(n);
+            items.add(it);
         }
         return items;
     }
 
     private static void drawCount(Canvas c, String e, int n, float cx, float cy, float s) {
-        // Dice-like layouts, as fractions of the card size.
-        float[][][] layouts = {
-                {{0, 0}},
-                {{-0.25f, 0}, {0.25f, 0}},
-                {{0, -0.24f}, {-0.26f, 0.2f}, {0.26f, 0.2f}},
-                {{-0.24f, -0.24f}, {0.24f, -0.24f}, {-0.24f, 0.24f}, {0.24f, 0.24f}},
-                {{-0.28f, -0.28f}, {0.28f, -0.28f}, {0, 0}, {-0.28f, 0.28f}, {0.28f, 0.28f}},
-        };
-        float size = n == 1 ? s * 0.75f : s * 0.38f;
-        for (float[] p : layouts[n - 1]) Art.emoji(c, e, cx + p[0] * s, cy + p[1] * s, size);
+        if (n <= 5) {
+            // Dice-like layouts, as fractions of the card size.
+            float[][][] layouts = {
+                    {{0, 0}},
+                    {{-0.25f, 0}, {0.25f, 0}},
+                    {{0, -0.24f}, {-0.26f, 0.2f}, {0.26f, 0.2f}},
+                    {{-0.24f, -0.24f}, {0.24f, -0.24f}, {-0.24f, 0.24f}, {0.24f, 0.24f}},
+                    {{-0.28f, -0.28f}, {0.28f, -0.28f}, {0, 0}, {-0.28f, 0.28f}, {0.28f, 0.28f}},
+            };
+            float size = n == 1 ? s * 0.75f : s * 0.38f;
+            for (float[] p : layouts[n - 1]) Art.emoji(c, e, cx + p[0] * s, cy + p[1] * s, size);
+            return;
+        }
+        int[][] rows = {{3, 3}, {4, 3}, {4, 4}, {3, 3, 3}, {5, 5}};
+        int[] r = rows[n - 6];
+        int maxCols = 0;
+        for (int k : r) maxCols = Math.max(maxCols, k);
+        float step = s * 0.95f / Math.max(maxCols, r.length);
+        float size = step * 0.9f;
+        float top = cy - step * (r.length - 1) / 2f;
+        for (int row = 0; row < r.length; row++) {
+            float left = cx - step * (r[row] - 1) / 2f;
+            for (int col = 0; col < r[row]; col++) {
+                Art.emoji(c, e, left + col * step, top + row * step, size);
+            }
+        }
     }
 
     private static final String[][] PIECE_SPEECH = {
@@ -204,22 +203,95 @@ final class Decks {
         for (int i = 0; i < 6; i++) {
             final int type = i;
             String name = Pieces.name(i);
-            items.add(new Item(name, name + "! " + Lang.t(PIECE_SPEECH[i]), Color.rgb(93, 64, 55), pastel(i),
+            Item it = new Item(name, name + "! " + Lang.t(PIECE_SPEECH[i]), Color.rgb(93, 64, 55), pastel(i),
                     (c, cx, cy, s) -> {
                         Pieces.draw(c, type, true, cx - s * 0.24f, cy, s * 0.62f);
                         Pieces.draw(c, type, false, cx + s * 0.24f, cy, s * 0.62f);
-                    }));
+                    });
+            it.sub = sub(Pieces.nameIn(i, Lang.EN), Pieces.nameIn(i, Lang.BN));
+            items.add(it);
+        }
+        return items;
+    }
+
+    /** অ আ ই ... with a picture word for each letter. Always spoken in Bengali. */
+    static List<Item> bengaliLetters() {
+        List<Item> items = new ArrayList<>();
+        List<String[]> rows = Data.rows("letters_bn.txt");
+        for (int i = 0; i < rows.size(); i++) {
+            String[] d = rows.get(i);
+            if (d.length < 6) continue;
+            final String letter = d[0];
+            String name = d[1], word = d[2];
+            final String emoji = d[3];
+            boolean vowel = i < 11;
+            final int color = vowel ? Color.rgb(216, 27, 96) : Color.rgb(25, 118, 210);
+            String speech = word.startsWith(letter)
+                    ? name + "! " + letter + "-তে " + word + "।"
+                    : name + "! যেমন, " + word + "।";
+            Item it = new Item(word, speech, color, pastel(i), (c, cx, cy, s) -> {
+                Art.label(c, letter, cx - s * 0.16f, cy - s * 0.06f, s * 0.7f, color);
+                drawArt(c, emoji, cx + s * 0.3f, cy + s * 0.26f, s * 0.4f);
+            });
+            it.speechLang = Lang.BN;
+            it.ask = name;
+            it.sub = Lang.current == Lang.HI ? d[5] : d[4];
+            items.add(it);
+        }
+        return items;
+    }
+
+    /** A for Apple. Always spoken in English. */
+    static List<Item> abc() {
+        List<Item> items = new ArrayList<>();
+        List<String[]> rows = Data.rows("abc.txt");
+        int[] colors = {Color.rgb(229, 57, 53), Color.rgb(30, 136, 229), Color.rgb(67, 160, 71),
+                Color.rgb(251, 140, 0), Color.rgb(142, 36, 170)};
+        for (int i = 0; i < rows.size(); i++) {
+            String[] d = rows.get(i);
+            if (d.length < 5) continue;
+            final String letter = d[0];
+            String word = d[1];
+            final String art = d[2];
+            final int color = colors[i % colors.length];
+            Item it = new Item(word, letter + "! " + letter + " for " + word + ".", color, pastel(i),
+                    (c, cx, cy, s) -> {
+                        Art.label(c, letter + letter.toLowerCase(), cx - s * 0.14f, cy - s * 0.08f, s * 0.5f, color);
+                        drawArt(c, art, cx + s * 0.3f, cy + s * 0.26f, s * 0.4f);
+                    });
+            it.speechLang = Lang.EN;
+            it.ask = "the letter " + letter;
+            it.sub = Lang.current == Lang.HI ? d[4] : d[3];
+            items.add(it);
+        }
+        return items;
+    }
+
+    /** Bengali rhymes first, then English and Hindi; each one is read in its own language. */
+    static List<Item> rhymes() {
+        List<Item> items = new ArrayList<>();
+        for (String[] d : Data.rows("rhymes.txt")) {
+            if (d.length < 6) continue;
+            final String emoji = d[0];
+            int lang = d[1].equals("bn") ? Lang.BN : d[1].equals("hi") ? Lang.HI : Lang.EN;
+            String[] titles = {d[2], d[3], d[4]};
+            String title = titles[lang];
+            Item it = new Item(title, d[5].replace("/", " "), INK, pastel(items.size()),
+                    (c, cx, cy, s) -> drawArt(c, emoji, cx, cy, s * 0.9f));
+            it.speechLang = lang;
+            it.text = d[5].replace("/", "\n");
+            int subLang = Lang.current != lang ? Lang.current : lang == Lang.EN ? Lang.BN : Lang.EN;
+            it.sub = titles[subLang];
+            items.add(it);
         }
         return items;
     }
 
     static List<Item> surprise() {
         List<Item> all = new ArrayList<>();
-        all.addAll(colors());
-        all.addAll(shapes());
-        all.addAll(animals());
-        all.addAll(things());
-        all.addAll(pieces());
+        for (int id : new int[]{COLORS, SHAPES, ANIMALS, BIRDS, FOOD, THINGS, VEHICLES, PIECES}) {
+            all.addAll(deck(id));
+        }
         Collections.shuffle(all);
         return all;
     }
@@ -228,14 +300,44 @@ final class Decks {
         return (String) row[first + 2 * Lang.current];
     }
 
-    private static List<Item> emojiDeck(String[][] data) {
+    /** Cards from a word list: picture | en | fact | bn | fact | hi | fact. */
+    private static List<Item> listDeck(String file) {
         List<Item> items = new ArrayList<>();
-        for (String[] d : data) {
-            final String emoji = d[0];
-            if (!Art.hasEmoji(emoji)) continue;
-            items.add(new Item(pick(d, 1), pick(d, 2), Color.rgb(60, 36, 90), pastel(items.size()),
-                    (c, cx, cy, s) -> Art.emoji(c, emoji, cx, cy, s * 0.9f)));
+        for (String[] d : Data.rows(file)) {
+            if (d.length < 7) continue;
+            String label = d[1 + 2 * Lang.current];
+            String fact = d[2 + 2 * Lang.current].trim();
+            String speech = fact.isEmpty() ? label + "!" : label + "! " + fact;
+            final String art = d[0];
+            Item it = new Item(label, speech, INK, pastel(items.size()), painter(art, label));
+            it.sub = sub(d[1], d[3]);
+            items.add(it);
         }
         return items;
+    }
+
+    private static Item.Painter painter(final String art, final String label) {
+        final int at = art.indexOf('@');
+        final String emoji = at < 0 ? art : art.substring(0, at);
+        if (!emoji.isEmpty() && Art.hasEmoji(emoji)) {
+            return (c, cx, cy, s) -> Art.emoji(c, emoji, cx, cy, s * 0.9f);
+        }
+        if (at >= 0) {
+            final BirdArt.Spec spec = BirdArt.parse(art.substring(at));
+            if (spec != null) return (c, cx, cy, s) -> BirdArt.draw(c, spec, cx, cy, s);
+        }
+        return (c, cx, cy, s) -> Art.letterBadge(c, label, cx, cy, s * 0.8f);
+    }
+
+    /** Draws an emoji, a bird spec or a named drawing such as "@xylophone". */
+    static void drawArt(Canvas c, String art, float cx, float cy, float s) {
+        if (art.equals("@xylophone")) {
+            InstrumentArt.icon(c, Instrument.XYLOPHONE, cx, cy, s);
+        } else if (art.startsWith("@")) {
+            BirdArt.Spec spec = BirdArt.parse(art);
+            if (spec != null) BirdArt.draw(c, spec, cx, cy, s);
+        } else {
+            Art.emoji(c, art, cx, cy, s);
+        }
     }
 }

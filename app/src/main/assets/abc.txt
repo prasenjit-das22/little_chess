@@ -1,0 +1,27 @@
+# letter | word | picture | Bengali word | Hindi word
+A|Apple|🍎|আপেল|सेब
+B|Ball|⚽|বল|गेंद
+C|Cat|🐈|বিড়াল|बिल्ली
+D|Dog|🐕|কুকুর|कुत्ता
+E|Elephant|🐘|হাতি|हाथी
+F|Fish|🐟|মাছ|मछली
+G|Grapes|🍇|আঙুর|अंगूर
+H|House|🏠|বাড়ি|घर
+I|Ice cream|🍦|আইসক্রিম|आइसक्रीम
+J|Juice|🧃|জুস|जूस
+K|Kite|🪁|ঘুড়ি|पतंग
+L|Lion|🦁|সিংহ|शेर
+M|Mango|🥭|আম|आम
+N|Nose|👃|নাক|नाक
+O|Orange|🍊|কমলালেবু|संतरा
+P|Parrot|🦜|টিয়া|तोता
+Q|Queen|👸|রানি|रानी
+R|Rabbit|🐇|খরগোশ|खरगोश
+S|Sun|☀️|সূর্য|सूरज
+T|Tiger|🐅|বাঘ|बाघ
+U|Umbrella|☂️|ছাতা|छाता
+V|Violin|🎻|বেহালা|वायलिन
+W|Watch|⌚|ঘড়ি|घड़ी
+X|Xylophone|@xylophone|জাইলোফোন|ज़ाइलोफ़ोन
+Y|Yo-yo|🪀|ইয়ো-ইয়ো|यो-यो
+Z|Zebra|🦓|জেব্রা|ज़ेबरा

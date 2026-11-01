@@ -1,0 +1,109 @@
+# picture | English | fact | Bengali | fact | Hindi | fact
+# The picture is an emoji, a drawing spec starting with @, or emoji@spec (drawing used when the
+# phone has no such emoji). Drawing spec:
+#   @kind body head wing belly beak legs accent crest flags
+# kinds: s songbird, k kingfisher, r bird of prey, p parrot, w wader, d duck, g ground bird,
+#   x big runner, f flying, o owl, u upright, h hummingbird
+# flags: C crest, L long tail, F forked tail, S streamer tail, P peacock tail, Z short tail,
+#   H hooked beak, D curved beak, + bigger beak, Y spoon beak, Q pouch, G long neck, J long legs,
+#   A casque, O comb; accent colour patches: T throat, M eye mask, N neck, W wing, K cap, V vent, R eye
+🐦‍⬛@s 2B2B2B 6E6E6E 1E1E1E 3A3A3A 1A1A1A 2A2A2A 1E1E1E - K|Crow|Caw caw! A very clever bird.|কাক|কা কা! খুব চালাক পাখি।|कौआ|काँव काँव! बहुत चालाक पक्षी।
+@s B07A4A 9E9E9E 8B5A2B E6DCCF 3E2723 C49A6C 2A2A2A - T|Sparrow|Chirp chirp!|চড়ুই|কিচিরমিচির!|गौरैया|चीं चीं!
+@s 6D4C41 1C1C1C 5D4037 9C7B6A FBC02D FBC02D FBC02D - MW|Myna|A chatty bird!|শালিক|শালিক পাখি খুব বকবক করে!|मैना|बहुत बातूनी चिड़िया!
+@g 90A4AE 607D8B 78909C B0BEC5 37474F E57373 26A69A - N|Pigeon|Coo coo!|পায়রা|বাক বাকুম!|कबूतर|गुटर गूँ!
+🕊️@f FFFFFF FFFFFF F2F2F2 FFFFFF F48FB1 F48FB1 - - -|Dove|A white bird of peace.|সাদা পায়রা|শান্তির পাখি।|सफ़ेद कबूतर|शांति का पक्षी।
+@g C4A484 B8AFA6 A1887F DCC9B6 37474F E57373 2A2A2A - N|Spotted dove|Ghoo ghoo!|ঘুঘু|ঘু ঘু!|फ़ाख़्ता|घू घू!
+🦜@p 43A047 43A047 2E7D32 7CC47F D32F2F 9E9E9E 1A1A1A - N|Parrot|It can talk! Hello!|টিয়া|টিয়া পাখি কথা বলে!|तोता|मिट्ठू मिट्ठू! बात करता है।
+@p 4CAF50 4CAF50 388E3C 8BC88E C62828 9E9E9E 8E1F1F - W|Alexandrine parakeet|A big parakeet with red shoulders.|চন্দনা|বড় টিয়া, ডানায় লাল ছোপ।|पहाड़ी तोता|कंधे पर लाल धब्बा।
+🦚@g 1565C0 1E88E5 0D47A1 1976D2 8D6E63 9E9E9E 2E7D32 1565C0 CP|Peacock|It dances in the rain!|ময়ূর|বৃষ্টিতে পেখম মেলে নাচে!|मोर|बारिश में नाचता है! हमारा राष्ट्रीय पक्षी।
+@g A1887F 5E8C61 8D6E63 EFEBE9 5D4037 9E9E9E - 5E8C61 C|Peahen|The mother peafowl.|ময়ূরী|ময়ূরের সঙ্গী।|मोरनी|मोर की साथी।
+@k 8D4A2B 8D4A2B 1E88E5 8D4A2B D32F2F D32F2F FFFFFF - T|Kingfisher|Splash! It catches fish.|মাছরাঙা|ঝুপ করে মাছ ধরে!|किलकिला|झट से मछली पकड़ता है!
+@k F2F2F2 FAFAFA 2A2A2A FFFFFF 212121 212121 212121 2A2A2A CM|Pied kingfisher|Black and white. It hovers over water.|পাকড়া মাছরাঙা|সাদা-কালো মাছরাঙা।|चितकबरा किलकिला|काला सफ़ेद किलकिला।
+@k 1E88E5 1E88E5 039BE5 FB8C00 212121 E53935 FFFFFF - T|Little blue kingfisher|Tiny, blue and orange.|ছোট মাছরাঙা|ছোট্ট নীল-কমলা মাছরাঙা।|छोटा किलकिला|नीला और नारंगी।
+@s 5D4037 1C1C1C 4E342E BCAAA4 212121 424242 D32F2F 1C1C1C CV|Bulbul|It sings a sweet song.|বুলবুলি|মিষ্টি সুরে গান গায়।|बुलबुल|मीठा गाना गाती है।
+@s 1A1A1A 1A1A1A 212121 FFFFFF 1A1A1A 37474F FFFFFF - WL|Magpie robin|The national bird of Bangladesh!|দোয়েল|বাংলাদেশের জাতীয় পাখি! মিষ্টি শিস দেয়।|दहियर|मीठी सीटी बजाता है।
+@s 1A1A2E 1A1A2E 111122 1A1A2E 9CCC65 607D8B D32F2F - LR|Cuckoo|Koo-oo! It sings in spring.|কোকিল|কুহু কুহু! বসন্তে গান গায়।|कोयल|कुहू कुहू! बसंत में गाती है।
+🦉@o 8D6E63 8D6E63 6D4C41 D7CCC8 F9A825 8D6E63 FFC107 8D6E63 C|Owl|Hoot hoot! Awake at night.|পেঁচা|হুতুম হুতুম! রাতে জাগে।|उल्लू|हू हू! रात में जागता है।
+@o D7A86E E0C9A6 C8995F FFFFFF EADBC0 E0C9A6 1A1A1A - -|Barn owl|A white, heart-shaped face.|লক্ষ্মীপেঁচা|পানপাতার মতো সাদা মুখ।|बार्न उल्लू|दिल जैसा सफ़ेद चेहरा।
+@o 8D7B6B 8D7B6B 6D5B4B EDE7E0 D9C27A 8D7B6B FFEB3B - -|Spotted owlet|A tiny owl with spots.|খুঁড়ুলে পেঁচা|ছোট্ট ফুটকি পেঁচা।|चित्तीदार उल्लू|छोटा धब्बेदार उल्लू।
+🦅@r 5D4037 FFFFFF 4E342E 5D4037 FBC02D FBC02D - - H|Eagle|It flies high in the sky!|ঈগল|আকাশে অনেক উঁচুতে ওড়ে!|गरुड़|आसमान में बहुत ऊँचा उड़ता है!
+@f 6D4C41 7D5A4C 5D4037 8D6E63 212121 FBC02D - - FH|Kite|It circles over the city.|চিল|আকাশে ঘুরে ঘুরে ওড়ে।|चील|आसमान में चक्कर लगाती है।
+@r A0522D FFFFFF 8B4513 FFFFFF FBC02D FBC02D - - H|Brahminy kite|Red-brown with a white head.|শঙ্খচিল|সাদা মাথা, লালচে ডানা।|ब्राह्मणी चील|सफ़ेद सिर, लाल-भूरे पंख।
+@r 4E342E F3C1B8 3E2723 6D4C41 37474F 757575 EFEBE9 - HN|Vulture|It keeps nature clean.|শকুন|প্রকৃতিকে পরিষ্কার রাখে।|गिद्ध|प्रकृति का सफ़ाईवाला।
+@r 90A4AE 78909C 607D8B FFE0B2 37474F FBC02D E65100 - HR|Hawk|Very sharp eyes!|বাজপাখি|খুব তীক্ষ্ণ চোখ!|बाज़|बहुत तेज़ नज़र!
+@r 546E7A 263238 455A64 ECEFF1 FBC02D FBC02D 263238 - HM|Falcon|The fastest bird!|শাহিন|সবচেয়ে দ্রুত পাখি!|शाहीन|सबसे तेज़ पक्षी!
+@r 5D4037 FFFFFF 4E342E FFFFFF 212121 B0BEC5 3E2723 - HM|Osprey|The fish hawk.|মাছমুরাল|মাছ শিকার করে।|मछलीमार|मछली पकड़ता है।
+@w B39C82 C9B79C 8D7B68 F5F0E8 FBC02D C9B037 - - -|Pond heron|It waits very, very still.|কানিবক|চুপটি করে মাছের অপেক্ষা।|अंधा बगुला|चुपचाप मछली का इंतज़ार।
+@w FFFFFF FFFFFF F3F3F3 FFFFFF FBC02D 2A2A2A - - -|Egret|A snow-white bird by the pond.|সাদা বক|পুকুর পাড়ের ধবধবে সাদা পাখি।|सफ़ेद बगुला|तालाब किनारे सफ़ेद पक्षी।
+@w 9E9E9E ECEFF1 78909C E0E0E0 FBC02D A1887F 212121 212121 CM|Grey heron|Tall and grey.|ধূসর বক|লম্বা ধূসর বক।|सलेटी बगुला|लंबा सलेटी बगुला।
+@w B0BEC5 E53935 90A4AE CFD8DC 546E7A F48FB1 - - -|Sarus crane|The tallest flying bird!|সারস|সবচেয়ে লম্বা উড়ন্ত পাখি!|सारस|सबसे लंबा उड़ने वाला पक्षी!
+@w EEEEEE EEEEEE 2B2B2B EEEEEE 6D4C41 F8BBD0 - - -|Openbill stork|It loves to eat snails!|শামুকখোল|শামুক খেতে ভালোবাসে!|घोंघिल|घोंघे खाता है!
+@w FFFFFF F7B27A 2A2A2A FFFFFF FBC02D E57373 F48FB1 - DW|Painted stork|Pink feathers near its tail.|রাঙা মানিকজোড়|লেজের কাছে গোলাপি পালক।|जांघिल|पूँछ के पास गुलाबी पंख।
+@w 90A4AE F8BBD0 455A64 ECEFF1 FFE082 ECEFF1 F48FB1 - +Q|Greater adjutant|A big, bald head.|হাড়গিলা|মাথায় একটাও পালক নেই!|हड़गिल्ला|गंजा सिर!
+🦩@w F48FB1 F8BBD0 F06292 F8BBD0 2A2A2A F06292 - - D|Flamingo|It stands on one leg!|ফ্লেমিংগো|এক পায়ে দাঁড়ায়!|फ़्लेमिंगो|एक पैर पर खड़ा होता है!
+@w FFFFFF 2A2A2A F3F3F3 FFFFFF 2A2A2A 2A2A2A - - D+|Ibis|A long curved beak.|কাস্তেচরা|কাস্তের মতো বাঁকা ঠোঁট।|आइबिस|हँसिया जैसी चोंच।
+@w FFFFFF FFFFFF F3F3F3 FFFFFF 2A2A2A 2A2A2A - FFE082 CY|Spoonbill|Its beak looks like a spoon!|চামচঠুঁটি|চামচের মতো ঠোঁট!|चमचा बाज़ा|चम्मच जैसी चोंच!
+🦆@d 8D6E63 2E7D32 6D4C41 A1887F FBC02D FB8C00 FFFFFF - N|Duck|Quack quack!|হাঁস|প্যাঁক প্যাঁক!|बत्तख|क्वैक क्वैक!
+@d FFFFFF FFFFFF F3F3F3 FFFFFF FB8C00 FB8C00 - - -|White duck|It swims in the village pond.|পাতিহাঁস|গ্রামের পুকুরে সাঁতার কাটে।|सफ़ेद बत्तख|गाँव के तालाब में तैरती है।
+@d A1673B 8D6E63 6D4C41 C68B5A 37474F 607D8B - - -|Whistling duck|It whistles as it flies!|সরালি হাঁস|উড়তে উড়তে শিস দেয়!|सिल्ही|उड़ते हुए सीटी बजाती है!
+🪿@d ECEFF1 FFFFFF E0E0E0 FFFFFF FB8C00 FB8C00 - - G|Goose|Honk honk!|রাজহাঁস|প্যাঁক প্যাঁক! জোরে ডাকে।|कलहंस|हॉन्क हॉन्क!
+🦢@d FFFFFF FFFFFF F3F3F3 FFFFFF FB8C00 2A2A2A - - GG|Swan|A graceful long neck.|মরাল|লম্বা গলার সুন্দর হাঁস।|हंस|सुंदर लंबी गर्दन।
+@d 8D6E63 FF9800 5D4037 F5F5F5 D32F2F FB8C00 FFFFFF FF9800 CM|Mandarin duck|The most colourful duck!|ম্যান্ডারিন হাঁস|সবচেয়ে রঙিন হাঁস!|मैंडरिन बत्तख|सबसे रंगीन बत्तख!
+🐔|Hen|Cluck cluck! She lays eggs.|মুরগি|কক কক! ডিম পাড়ে।|मुर्गी|कुट कुट! अंडे देती है।
+🐓|Rooster|Cock-a-doodle-doo! It wakes us up.|মোরগ|কোঁকর কোঁ! সকালে ঘুম ভাঙায়।|मुर्गा|कुकड़ूँ कूँ! सुबह जगाता है।
+🐤|Chick|Peep peep!|মুরগির ছানা|চিঁ চিঁ!|चूज़ा|चीं चीं!
+🐣|Hatching chick|Crack! Out of the egg.|ডিম ফুটে ছানা|ডিম ভেঙে বেরিয়ে এল!|अंडे से निकला चूज़ा|अंडा टूटा, चूज़ा निकला!
+🦃|Turkey|Gobble gobble!|টার্কি|গব গব গব!|टर्की|गॉबल गॉबल!
+@g D84315 FF7043 BF360C 2A2A2A 616161 757575 D32F2F - OL|Red junglefowl|The wild chicken of the forest.|বনমোরগ|বনের মোরগ।|जंगली मुर्गा|जंगल का मुर्गा।
+@g A1887F 8D6E63 795548 D7CCC8 37474F F5CBA7 - - Z|Quail|A tiny round bird.|বটের|ছোট্ট গোলগাল পাখি।|बटेर|छोटी गोल चिड़िया।
+@g 8D6E63 BCAAA4 6D4C41 D7CCC8 616161 E57373 FF7043 - T|Partridge|It runs on the ground.|তিতির|মাটিতে দৌড়ায়।|तीतर|ज़मीन पर दौड़ता है।
+@g C2541C 1B5E20 8D3A12 B5651D FFF59D 9E9E9E D32F2F - ML|Pheasant|A long, shiny tail.|ফেজান্ট|লম্বা চকচকে লেজ।|फ़ेज़ेंट|लंबी चमकदार पूँछ।
+🐧@u 2A2A2A 2A2A2A 1E1E1E FFFFFF FB8C00 FB8C00 FFC107 - T|Penguin|Waddle waddle on the ice.|পেঙ্গুইন|বরফে হেলেদুলে হাঁটে।|पेंगुइन|बर्फ़ पर डगमग चलता है।
+@u 2A2A2A 2A2A2A 1E1E1E FFFFFF FF7043 FF7043 FFFFFF - M+|Puffin|A colourful beak!|পাফিন|রঙিন ঠোঁট!|पफ़िन|रंगीन चोंच!
+@u 2A2A2A 263238 1B1B1B 263238 607D8B 2A2A2A FFC107 - HT|Cormorant|It dives deep for fish.|পানকৌড়ি|ডুব দিয়ে মাছ ধরে।|जलकौआ|डुबकी लगाकर मछली पकड़ता है।
+@d FFFFFF FFFFFF E0E0E0 FFFFFF FBC02D FB8C00 FFB74D - GQ+|Pelican|A big pouch under its beak.|গগনবেড়|ঠোঁটের নিচে বড় থলি।|हवासील|चोंच के नीचे बड़ी थैली।
+@f FFFFFF FFFFFF B0BEC5 FFFFFF FBC02D FB8C00 - - -|Seagull|It flies over the sea.|গাঙচিল|সমুদ্রের উপর ওড়ে।|सीगल|समुद्र के ऊपर उड़ता है।
+@f FFFFFF FFFFFF 455A64 FFFFFF F8BBD0 F8BBD0 - - +|Albatross|The longest wings!|অ্যালবাট্রস|সবচেয়ে লম্বা ডানা!|अल्बाट्रॉस|सबसे लंबे पंख!
+@f 1A237E 1A237E 0D1442 FFF3E0 212121 212121 C62828 - FT|Swallow|It swoops and swirls.|আবাবিল|এঁকেবেঁকে ওড়ে।|अबाबील|तेज़ी से लहराती उड़ती है।
+@f 4E4E4E 4E4E4E 3A3A3A 6E6E6E 212121 212121 - - F|Swift|It almost never lands!|বাতাসি|প্রায় সারাক্ষণ উড়ে বেড়ায়!|बतासी|हमेशा उड़ती रहती है!
+@s 2A2A2A 2A2A2A 1E1E1E FFFFFF FBC02D 616161 FFFFFF FFC107 A++LW|Hornbill|A huge beak with a helmet!|ধনেশ|ঠোঁটের উপর টুপি!|धनेश|चोंच पर टोपी!
+@s 2A2A2A 2A2A2A 1E1E1E FFF59D FF9800 4FC3F7 FFF59D - T+++|Toucan|A giant, colourful beak.|টুকান|রঙিন বিশাল ঠোঁট!|टूकेन|बड़ी रंगीन चोंच!
+@s F2B705 FFFFFF E0A800 FFFFFF 424242 607D8B 2A2A2A D32F2F CM+|Woodpecker|Tok tok tok on the tree!|কাঠঠোকরা|ঠক ঠক ঠক! গাছে ঠোকরায়।|कठफोड़वा|ठक ठक ठक!
+@s E0A060 E0A060 2A2A2A F0C08A 2A2A2A 607D8B FFFFFF E07A30 CWD+|Hoopoe|A fan-shaped crown!|মোহনচূড়া|মাথায় পাখার মতো ঝুঁটি!|हुदहुद|सिर पर पंखे जैसा ताज!
+@s FDD835 FDD835 8D6E63 FFF59D 5D4037 E0A070 2A2A2A - M|Weaver bird|It weaves a hanging nest!|বাবুই|ঝুলন্ত বাসা বোনে!|बया|लटकता घोंसला बुनती है!
+@s 9CCC65 C66A2C 7CB342 FAFAFA 616161 F5CBA7 C66A2C - KL|Tailorbird|It sews leaves into a nest!|টুনটুনি|পাতা সেলাই করে বাসা বানায়!|दर्जिन चिड़िया|पत्ते सिलकर घोंसला बनाती है!
+@s 4A148C 4A148C 38006B 4A148C 212121 212121 - - D+|Sunbird|It sips nectar from flowers.|মৌটুসি|ফুলের মধু খায়।|शक्करखोरा|फूलों का रस पीती है।
+@s 151515 151515 0A0A0A 1E1E1E 151515 333333 D32F2F - FR|Drongo|A forked tail. Very brave!|ফিঙে|চেরা লেজ, খুব সাহসী!|भुजंगा|दो फाँक पूँछ, बहुत बहादुर!
+@s 5C8DB8 4FC3F7 1565C0 B07D62 424242 F5CBA7 - - -|Indian roller|Bright blue wings!|নীলকণ্ঠ|উজ্জ্বল নীল ডানা!|नीलकंठ|चमकीले नीले पंख!
+@s FFD600 FFD600 2A2A2A FFE57F E91E63 607D8B 2A2A2A - M|Golden oriole|Bright golden yellow!|বেনেবউ|সোনালি হলুদ পাখি!|पीलक|सुनहरी पीली चिड़िया!
+@s 7CB342 7CB342 689F38 9CCC65 2A2A2A 607D8B 2A2A2A - MSD|Bee-eater|It catches bees in the air!|সুইচোরা|উড়ে উড়ে পোকা ধরে!|पतरिंगा|उड़ते कीड़े पकड़ता है!
+@s 7CB342 7CB342 689F38 F1F8E9 2A2A2A E57373 D32F2F - K+|Coppersmith barbet|Tuk tuk tuk, like a blacksmith!|বসন্তবৌরি|টুক টুক টুক ডাকে!|ठठेरा|टुक टुक टुक!
+@s 8D4A2B 3E2723 6D3A1E FFFFFF 607D8B 9E9E9E - - Z|Munia|A tiny seed eater.|মুনিয়া|ছোট্ট দানা খাওয়া পাখি।|मुनिया|छोटी दाना खाने वाली चिड़िया।
+@g A1887F 2A2A2A 8D6E63 FFFFFF D32F2F FDD835 D32F2F - JM|Lapwing|Did-you-do-it! it calls.|হট্টিটি|হট্টিটি! করে চেঁচায়।|टिटहरी|टी-टी-टूट! चिल्लाती है।
+@g 424242 FFFFFF 37474F FFFFFF FDD835 FDD835 C66A2C - JV|Waterhen|It walks by the water.|ডাহুক|কোয়াক কোয়াক! জলের ধারে হাঁটে।|जलमुर्गी|पानी के पास घूमती है।
+@g 3949AB 3F51B5 1A237E 5C6BC0 E53935 E53935 E53935 - JA|Purple swamphen|Purple, with a red forehead.|কালেম|বেগুনি পাখি, লাল কপাল।|बैंगनी जलमुर्गी|बैंगनी पक्षी, लाल माथा।
+@g 3E2723 FFFFFF F5F5F5 3E2723 607D8B 607D8B FFD54F - JLN|Jacana|It walks on lily leaves!|জলপিপি|শাপলা পাতায় হাঁটে!|जल मोर|कमल के पत्तों पर चलता है!
+@u 3E2723 6D4C41 2A2A2A 3E2723 FDD835 616161 - - +G|Snakebird|A long, snake-like neck.|গয়ার|সাপের মতো গলা!|डार्टर|साँप जैसी गर्दन!
+@x 2A2A2A E6B8B0 1E1E1E FFFFFF F8BBD0 F8BBD0 - - -|Ostrich|The biggest bird. It runs very fast!|উটপাখি|সবচেয়ে বড় পাখি, খুব জোরে দৌড়ায়!|शुतुरमुर्ग|सबसे बड़ा पक्षी, बहुत तेज़ दौड़ता है!
+@x 8D6E63 607D8B 795548 8D6E63 37474F 6D4C41 - - -|Emu|It can't fly, but it runs fast.|এমু|উড়তে পারে না, দৌড়ায়।|एमू|उड़ नहीं सकता, दौड़ता है।
+@x 1A1A1A 29B6F6 111111 1A1A1A 2A2A2A 616161 E53935 C8A165 AN|Cassowary|A helmet on its head!|ক্যাসোয়ারি|মাথায় শিরস্ত্রাণ!|कैसोवरी|सिर पर टोप!
+@g 8D6E63 8D6E63 795548 A1887F E0C9A6 E0C9A6 - - D++Z|Kiwi|It sniffs with its long beak.|কিউই|লম্বা ঠোঁট দিয়ে খাবার খোঁজে।|कीवी|लंबी चोंच से खाना ढूँढता है।
+🦤@g 9E9E9E BDBDBD 8D8D8D CFD8DC FFE082 FDD835 - - H+|Dodo|A bird from long, long ago.|ডোডো|অনেক আগের পাখি।|डोडो|बहुत पहले का पक्षी।
+@s 8D6E63 8D6E63 7B5E50 FF7043 3E2723 A1887F FF7043 - T|Robin|A red-orange chest.|রবিন|লাল-কমলা বুক।|रॉबिन|लाल-नारंगी सीना।
+@s D32F2F D32F2F C62828 E53935 FF8A65 A1887F 2A2A2A D32F2F CM|Cardinal|A bright red bird with a crest.|কার্ডিনাল|টকটকে লাল ঝুঁটিওয়ালা পাখি!|कार्डिनल|चटक लाल कलगी वाली चिड़िया!
+@s 42A5F5 42A5F5 1E88E5 ECEFF1 2A2A2A 424242 2A2A2A 42A5F5 CN|Blue jay|Blue, with a crest!|ব্লু জে|নীল ঝুঁটিওয়ালা পাখি।|ब्लू जे|नीली कलगी वाली चिड़िया।
+@s FFEB3B FFEB3B FDD835 FFF59D F8BBD0 F8BBD0 - - -|Canary|A little yellow singer.|ক্যানারি|ছোট্ট হলুদ গায়ক পাখি।|कैनरी|छोटी पीली गाने वाली चिड़िया।
+@s FFEB3B FFEB3B 2A2A2A FFF59D FF9800 F5CBA7 2A2A2A - K|Goldfinch|Yellow, with black wings.|গোল্ডফিঞ্চ|হলুদ গা, কালো ডানা।|गोल्डफ़िंच|पीला शरीर, काले पंख।
+@h 43A047 43A047 2E7D32 C8E6C9 212121 212121 E91E63 - T|Hummingbird|It hums and hovers! The smallest bird.|হামিংবার্ড|সবচেয়ে ছোট পাখি, শূন্যে থেমে ওড়ে!|हमिंगबर्ड|सबसे छोटी चिड़िया, हवा में ठहरती है!
+@p E53935 E53935 1E88E5 E53935 ECEFF1 607D8B FDD835 - W|Macaw|Red, blue and yellow!|ম্যাকাও|লাল, নীল, হলুদ!|मकाऊ|लाल, नीला, पीला!
+@p FFFFFF FFFFFF F3F3F3 FFFFFF 424242 616161 - FFEB3B C|Cockatoo|A yellow crown!|কাকাতুয়া|মাথায় হলুদ ঝুঁটি!|काकातुआ|सिर पर पीली कलगी!
+@p 7CB342 FF7043 689F38 C5E1A5 E53935 9E9E9E - - Z|Lovebird|Lovebirds sit close together.|লাভবার্ড|জোড়ায় জোড়ায় থাকে।|लवबर्ड|जोड़े में रहते हैं।
+@p 8BC34A FFEB3B 9E9D24 8BC34A FFE0B2 90A4AE - - -|Budgie|A chirpy little parakeet.|বদ্রি পাখি|ছোট্ট বকবকে পাখি।|बजरीगर|छोटा चहकता तोता।
+@s 151515 151515 0A0A0A 1E1E1E FF8F00 FFC107 FFC107 - M|Hill myna|It can copy our words!|ময়না|মানুষের কথা নকল করে!|पहाड़ी मैना|हमारी बोली की नकल करती है!
+@s 2A2A2A 2A2A2A 1E1E1E FFFFFF FF8F00 F5CBA7 FFFFFF - MW|Pied starling|Black and white. It loves the fields.|গোশালিক|মাঠে মাঠে ঘোরে।|अबलखा मैना|खेतों में घूमती है।
+@s A1887F A1887F 8D6E63 EFEBE9 6D4C41 D7CCC8 - - C|Skylark|It sings high up in the sky.|ভরতপাখি|আকাশে উড়ে উড়ে গান গায়।|चंडूल|आसमान में गाती है।
+@s 9E9E9E FFFFFF 424242 FFFFFF 212121 212121 2A2A2A - KL|Wagtail|It wags its tail up and down!|খঞ্জন|লেজ নাচায়!|खंजन|पूँछ हिलाती है!
+@s FFFFFF 1A1A1A FFFFFF FFFFFF 1E88E5 616161 - 1A1A1A CS|Paradise flycatcher|Long white tail ribbons.|দুধরাজ|লম্বা সাদা ফিতের মতো লেজ।|दूधराज|लंबी सफ़ेद पूँछ।
+@s 1A1A1A 1A1A1A 151515 E65100 1A1A1A F5CBA7 - - L|Shama|One of the best singers!|শ্যামা|খুব সুন্দর গান গায়!|शामा|बहुत सुरीला गाती है!
+@s FFEB3B FFEB3B 2A2A2A FFF176 607D8B 90A4AE FFFFFF - W|Iora|Yellow, with white wing bars.|ফটিকজল|হলুদ পাখি, ডানায় সাদা দাগ।|सौबीगा|पीली चिड़िया, पंखों पर सफ़ेद धारी।
+@s 1A1A1A 1A1A1A 8D3A12 1A1A1A 1A1A1A 424242 E53935 - LR|Coucal|Hoop hoop hoop!|কুবো|কুব কুব কুব!|महोख|हूप हूप हूप!

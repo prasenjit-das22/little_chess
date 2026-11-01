@@ -1,0 +1,101 @@
+# emoji | English | fact | Bengali | fact | Hindi | fact
+🥭|Mango|Sweet, juicy mango!|আম|মিষ্টি রসালো আম!|आम|मीठा रसीला आम!
+🍌|Banana|Peel it and eat it. Yummy!|কলা|খোসা ছাড়িয়ে খাও। খুব মজা!|केला|छीलो और खाओ। बहुत स्वादिष्ट!
+🍎|Apple|Crunch crunch!|আপেল|কচর মচর!|सेब|कुरकुरा!
+🍏|Green apple|A sour green apple.|সবুজ আপেল|টক টক সবুজ আপেল।|हरा सेब|खट्टा हरा सेब।
+🍊|Orange|Peel and share!|কমলালেবু|কোয়া কোয়া কমলালেবু!|संतरा|फाँक फाँक संतरा!
+🍋|Lemon|Sour! Make a funny face.|লেবু|টক! মুখটা কেমন হল?|नींबू|खट्टा! कैसा मुँह बना?
+🍉|Watermelon|Red inside, green outside.|তরমুজ|ভেতরে লাল, বাইরে সবুজ।|तरबूज़|अंदर लाल, बाहर हरा।
+🍇|Grapes|Little round grapes.|আঙুর|ছোট্ট গোল গোল আঙুর।|अंगूर|छोटे गोल अंगूर।
+🍓|Strawberry|Red and sweet.|স্ট্রবেরি|লাল আর মিষ্টি।|स्ट्रॉबेरी|लाल और मीठी।
+🫐|Blueberries|Tiny and blue.|ব্লুবেরি|ছোট্ট নীল ফল।|ब्लूबेरी|छोटी नीली।
+🍒|Cherries|Two red cherries.|চেরি|দুটো লাল চেরি।|चेरी|दो लाल चेरी।
+🍑|Peach|Soft and fuzzy.|পিচ|নরম তুলতুলে ফল।|आड़ू|नरम और रोएँदार।
+🍐|Pear|A juicy pear.|নাশপাতি|রসালো নাশপাতি।|नाशपाती|रसीली नाशपाती।
+🍍|Pineapple|Spiky outside, sweet inside!|আনারস|বাইরে কাঁটা, ভেতরে মিষ্টি!|अनानास|बाहर काँटे, अंदर मीठा!
+🥝|Kiwi fruit|Green with tiny seeds.|কিউই ফল|সবুজ, ছোট্ট কালো বীজ।|कीवी|हरा, छोटे बीज।
+🥥|Coconut|Coconut water to drink!|নারকেল|ডাবের জল খাও!|नारियल|नारियल पानी पियो!
+🍈|Melon|A big sweet melon.|ফুটি|বড় মিষ্টি ফুটি।|खरबूज़ा|बड़ा मीठा खरबूज़ा।
+🍅|Tomato|Red and round.|টমেটো|লাল আর গোল।|टमाटर|लाल और गोल।
+🍆|Brinjal|Purple brinjal. Begun bhaja!|বেগুন|বেগুনি বেগুন। বেগুন ভাজা!|बैंगन|बैंगनी बैंगन। बैंगन का भर्ता!
+🥕|Carrot|Crunchy and orange.|গাজর|কুড়মুড়ে কমলা গাজর।|गाजर|कुरकुरी नारंगी गाजर।
+🌽|Corn|Yellow corn on the cob.|ভুট্টা|হলুদ ভুট্টা।|भुट्टा|पीला भुट्टा।
+🥔|Potato|Aloo! Boil it, mash it.|আলু|আলু সেদ্ধ, আলু ভাজা!|आलू|आलू उबालो, आलू तलो!
+🍠|Sweet potato|Sweet and roasted.|রাঙা আলু|মিষ্টি পোড়া রাঙা আলু।|शकरकंद|मीठा भुना शकरकंद।
+🥒|Cucumber|Cool and crunchy.|শসা|ঠান্ডা কুড়মুড়ে শসা।|खीरा|ठंडा कुरकुरा खीरा।
+🥬|Leafy greens|Green leaves make you strong.|শাক|সবুজ শাক খেলে শক্তি হয়।|पालक|हरी सब्ज़ी से ताकत आती है।
+🥦|Broccoli|A little green tree!|ব্রকলি|ছোট্ট সবুজ গাছের মতো!|ब्रोकली|छोटा हरा पेड़!
+🧄|Garlic|Smelly garlic!|রসুন|ঝাঁঝালো গন্ধ!|लहसुन|तेज़ गंध!
+🧅|Onion|Onions make us cry!|পেঁয়াজ|পেঁয়াজ কাটলে চোখে জল!|प्याज़|प्याज़ काटो तो आँसू!
+🌶️|Chilli|Hot hot hot!|লঙ্কা|ঝাল ঝাল ঝাল!|मिर्च|तीखी तीखी!
+🫑|Capsicum|A green bell pepper.|ক্যাপসিকাম|সবুজ ক্যাপসিকাম।|शिमला मिर्च|हरी शिमला मिर्च।
+🍄|Mushroom|A little umbrella!|মাশরুম|ছোট্ট ছাতার মতো!|मशरूम|छोटी छतरी जैसा!
+🫛|Peas|Peas in a pod.|মটরশুঁটি|খোসার ভেতর মটর।|मटर|फली में मटर।
+🫚|Ginger|For hot ginger tea.|আদা|আদা দিয়ে চা!|अदरक|अदरक वाली चाय!
+🥜|Peanuts|Crack the shell!|চিনেবাদাম|খোলা ভেঙে খাও!|मूँगफली|छिलका तोड़ो!
+🫘|Beans|Red beans.|রাজমা|লাল রাজমা।|राजमा|लाल राजमा।
+🥑|Avocado|Green and creamy.|অ্যাভোকাডো|সবুজ নরম ফল।|एवोकाडो|हरा और मलाईदार।
+🫒|Olive|Little green olives.|জলপাই|জলপাইয়ের আচার!|जैतून|छोटे हरे जैतून।
+🍚|Rice|A bowl of rice.|ভাত|এক বাটি গরম ভাত।|चावल|एक कटोरी चावल।
+🍛|Curry and rice|Rice with curry. Yum!|ভাত তরকারি|ভাত আর তরকারি। দারুণ!|चावल सब्ज़ी|चावल और सब्ज़ी। वाह!
+🍲|Dal|Hot dal with rice.|ডাল|গরম গরম ডাল ভাত।|दाल|गरम दाल चावल।
+🥣|Puffed rice|Muri! Crunchy puffed rice.|মুড়ি|মুচমুচে মুড়ি!|मुरमुरे|कुरकुरे मुरमुरे!
+🫓|Roti|Round, soft roti.|রুটি|গোল নরম রুটি।|रोटी|गोल नरम रोटी।
+🍞|Bread|Soft bread.|পাউরুটি|নরম পাউরুটি।|ब्रेड|नरम ब्रेड।
+🥚|Egg|An egg. Crack!|ডিম|একটা ডিম। ঠক!|अंडा|एक अंडा। ठक!
+🍳|Fried egg|Sizzle sizzle!|ডিম ভাজা|ছ্যাঁক ছোঁক!|तला अंडा|छन छन!
+🥛|Milk|Drink your milk!|দুধ|দুধ খাও, বড় হও!|दूध|दूध पियो, बड़े बनो!
+🧀|Cheese|Yellow cheese with holes.|চিজ|হলুদ চিজ, গায়ে ফুটো।|चीज़|छेद वाला पीला चीज़।
+🧈|Butter|Butter on toast.|মাখন|পাউরুটিতে মাখন।|मक्खन|ब्रेड पर मक्खन।
+🍯|Honey|Sweet honey from bees.|মধু|মৌমাছির মিষ্টি মধু।|शहद|मधुमक्खी का मीठा शहद।
+🥟|Momo|Steamed momo!|মোমো|ভাপানো মোমো!|मोमो|भाप वाले मोमो!
+🍜|Noodle soup|Slurp slurp!|নুডল স্যুপ|সুড়ুৎ সুড়ুৎ!|नूडल सूप|सुड़प सुड़प!
+🥡|Chowmein|Twirly chowmein!|চাউমিন|প্যাঁচানো চাউমিন!|चाऊमीन|घुमावदार चाऊमीन!
+🍝|Pasta|Twirl the pasta.|পাস্তা|পাস্তা প্যাঁচাও।|पास्ता|पास्ता लपेटो।
+🍕|Pizza|A cheesy slice.|পিৎজা|চিজে ভরা পিৎজা।|पिज़्ज़ा|चीज़ वाला पिज़्ज़ा।
+🍔|Burger|A big burger!|বার্গার|বড় বার্গার!|बर्गर|बड़ा बर्गर!
+🍟|Fries|Crispy potato fries.|আলুভাজা|মুচমুচে আলুভাজা।|फ्रेंच फ्राइज़|कुरकुरे आलू।
+🌭|Hot dog|A sausage in a bun.|হট ডগ|পাউরুটির ভেতর সসেজ।|हॉट डॉग|बन में सॉसेज।
+🥪|Sandwich|Bread, filling, bread!|স্যান্ডউইচ|দুই পাউরুটির মাঝে মজা!|सैंडविच|दो ब्रेड के बीच मज़ा!
+🌯|Roll|A rolled-up kathi roll.|কাঠি রোল|মোড়ানো কাঠি রোল!|रोल|लिपटा हुआ रोल!
+🌮|Taco|A crunchy taco.|টাকো|মুচমুচে টাকো।|टाको|कुरकुरा टाको।
+🥗|Salad|Fresh salad.|স্যালাড|টাটকা স্যালাড।|सलाद|ताज़ा सलाद।
+🍿|Popcorn|Pop pop pop!|পপকর্ন|পট পট পট!|पॉपकॉर्न|पट पट पट!
+🥞|Pancakes|A stack of pancakes.|প্যানকেক|থাক থাক প্যানকেক।|पैनकेक|पैनकेक का ढेर।
+🧇|Waffle|Little squares!|ওয়াফল|ছোট ছোট খোপ!|वफ़ल|छोटे छोटे खाने!
+🍪|Biscuit|Nom nom nom!|বিস্কুট|মচমচ মচমচ!|बिस्कुट|कुरकुरा बिस्कुट!
+🍰|Cake|A slice of cake.|কেক|এক টুকরো কেক।|केक|केक का टुकड़ा।
+🎂|Birthday cake|Happy birthday! Blow the candles.|জন্মদিনের কেক|শুভ জন্মদিন! মোমবাতি নেভাও।|जन्मदिन का केक|जन्मदिन मुबारक! मोमबत्ती बुझाओ।
+🧁|Cupcake|A little cake in a cup.|কাপকেক|ছোট্ট কাপের কেক।|कपकेक|कप में छोटा केक।
+🍩|Doughnut|Round with a hole!|ডোনাট|গোল, মাঝে ফুটো!|डोनट|गोल, बीच में छेद!
+🍫|Chocolate|Sweet chocolate.|চকলেট|মিষ্টি চকলেট।|चॉकलेट|मीठी चॉकलेट।
+🍬|Toffee|A sweet toffee.|লজেন্স|মিষ্টি লজেন্স।|टॉफ़ी|मीठी टॉफ़ी।
+🍭|Lollipop|Lick lick, lollipop!|ললিপপ|চেটে চেটে ললিপপ!|लॉलीपॉप|चाटो लॉलीपॉप!
+🍦|Ice cream|Cold, cold ice cream!|আইসক্রিম|ঠান্ডা ঠান্ডা আইসক্রিম!|आइसक्रीम|ठंडी ठंडी आइसक्रीम!
+🍨|Sundae|Ice cream in a bowl.|সানডে|বাটিতে আইসক্রিম।|संडे|कटोरी में आइसक्रीम।
+🍧|Shaved ice|Crunchy ice with syrup.|বরফ গোলা|রঙিন বরফ গোলা!|बर्फ़ का गोला|रंगीन बर्फ़ गोला!
+🍮|Pudding|Wobbly pudding.|পুডিং|থলথলে পুডিং।|पुडिंग|हिलती डुलती पुडिंग।
+🍵|Tea|A cup of hot tea.|চা|এক কাপ গরম চা।|चाय|गरम चाय का कप।
+☕|Coffee|Hot coffee for grown-ups.|কফি|বড়দের গরম কফি।|कॉफ़ी|बड़ों की गरम कॉफ़ी।
+🧃|Juice|Sip sip, juice!|জুস|চুমুক দিয়ে জুস!|जूस|घूँट घूँट जूस!
+🥤|Cold drink|With a straw.|ঠান্ডা পানীয়|স্ট্র দিয়ে খাও।|ठंडा|स्ट्रॉ से पियो।
+🧋|Bubble tea|Tea with little balls!|বাবল টি|ছোট ছোট বল সমেত চা!|बबल टी|छोटी गोलियों वाली चाय!
+💧|Water|Drink water every day.|জল|রোজ জল খাও।|पानी|रोज़ पानी पियो।
+🧊|Ice|Cold ice cubes.|বরফ|ঠান্ডা বরফের টুকরো।|बर्फ़|ठंडे बर्फ़ के टुकड़े।
+🧂|Salt|A little salt.|নুন|একটুখানি নুন।|नमक|थोड़ा सा नमक।
+🍗|Chicken|A chicken drumstick.|মুরগির মাংস|মুরগির ঠ্যাং।|चिकन|चिकन की टाँग।
+🍖|Meat|Meat on the bone.|মাংস|হাড়ের সঙ্গে মাংস।|गोश्त|हड्डी वाला गोश्त।
+🍤|Fried prawn|Crispy fried prawn.|চিংড়ি ভাজা|মুচমুচে চিংড়ি ভাজা।|झींगा फ्राई|कुरकुरा तला झींगा।
+🥘|Biryani|A big pot of biryani!|বিরিয়ানি|এক হাঁড়ি বিরিয়ানি!|बिरयानी|बिरयानी की हांडी!
+🧆|Pakora|Hot, crispy pakoras.|বড়া|গরম গরম মুচমুচে বড়া।|पकौड़े|गरम कुरकुरे पकौड़े।
+🍱|Tiffin box|Lunch for school!|টিফিন বাক্স|স্কুলের টিফিন!|टिफ़िन|स्कूल का खाना!
+🍙|Rice ball|A ball of rice.|ভাতের বল|ভাতের গোল্লা।|चावल का गोला|चावल का लड्डू।
+🍣|Sushi|Rice and fish rolls.|সুশি|ভাত আর মাছের রোল।|सुशी|चावल और मछली के रोल।
+🥐|Croissant|A flaky croissant.|ক্রোয়াসাঁ|খাস্তা ক্রোয়াসাঁ।|क्रोसां|परतदार क्रोसां।
+🥖|French bread|A long, long bread.|লম্বা পাউরুটি|লম্বা লম্বা রুটি।|लंबी ब्रेड|लंबी लंबी ब्रेड।
+🥨|Pretzel|A twisty pretzel.|প্রেটজেল|প্যাঁচানো প্রেটজেল।|प्रेट्ज़ेल|घुमावदार प्रेट्ज़ेल।
+🥯|Bagel|Bread with a hole.|বেগেল|মাঝে ফুটো রুটি।|बेगल|बीच में छेद वाली ब्रेड।
+🥧|Pie|A warm pie.|পাই|গরম পাই।|पाई|गरम पाई।
+🍡|Sweet balls|Three sweet balls on a stick!|কাঠিতে মিষ্টি|কাঠিতে তিনটে মিষ্টি গোল্লা!|डंडी पर मिठाई|डंडी पर तीन मीठे गोले!
+🥠|Fortune cookie|A cookie with a secret note!|ফরচুন কুকি|ভেতরে লুকোনো চিঠি!|फ़ॉर्च्यून कुकी|अंदर छुपा संदेश!
+🌰|Chestnut|A shiny brown nut.|বাদাম|চকচকে খয়েরি বাদাম।|शाहबलूत|चमकदार भूरा मेवा।

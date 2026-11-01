@@ -22,6 +22,10 @@ final class Pieces {
         return Lang.t(NAMES[type]);
     }
 
+    static String nameIn(int type, int lang) {
+        return NAMES[type][lang];
+    }
+
     /** "White knight!" in the current language. */
     static String colorName(int type, boolean white) {
         String color;

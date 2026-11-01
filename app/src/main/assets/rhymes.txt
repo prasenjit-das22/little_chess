@@ -1,0 +1,21 @@
+# picture | language (bn, en, hi) | English title | Bengali title | Hindi title | the rhyme, lines split by /
+# Each rhyme is read in its own language, whatever language the app is in.
+🌙|bn|Come, Uncle Moon|আয় আয় চাঁদ মামা|आओ चंदा मामा|আয় আয় চাঁদ মামা টিপ দিয়ে যা,/চাঁদের কপালে চাঁদ টিপ দিয়ে যা।/ধান ভানলে কুঁড়ো দেব, মাছ কাটলে মুড়ো দেব,/কালো গাইয়ের দুধ দেব, দুধ খাবার বাটি দেব,/চাঁদের কপালে চাঁদ টিপ দিয়ে যা।
+🐍|bn|Here comes the python|অ-য় অজগর|अ से अजगर|অ-য় অজগর আসছে তেড়ে,/আমটি আমি খাব পেড়ে।/ইঁদুর ছানা ভয়ে মরে,/ঈগল পাখি পাছে ধরে।
+🌧️|bn|Pitter-patter rain|বৃষ্টি পড়ে টাপুর টুপুর|टिप टिप बारिश|বৃষ্টি পড়ে টাপুর টুপুর নদেয় এল বান,/শিব ঠাকুরের বিয়ে হল তিন কন্যা দান।/এক কন্যা রাঁধেন বাড়েন, এক কন্যা খান,/এক কন্যা না পেয়ে বাপের বাড়ি যান।
+🥚|bn|Hattima tim tim|হাট্টিমা টিম টিম|हट्टिमा टिम टिम|হাট্টিমা টিম টিম,/তারা মাঠে পাড়ে ডিম,/তাদের খাড়া দুটো শিং,/তারা হাট্টিমা টিম টিম।
+🦜|bn|A parrot in the custard-apple tree|আতা গাছে তোতা পাখি|शरीफ़े के पेड़ पर तोता|আতা গাছে তোতা পাখি, ডালিম গাছে মৌ,/এত ডাকি তবু কথা কও না কেন বৌ?
+🕊️|bn|Little pigeons|নোটন নোটন পায়রাগুলি|नोटन नोटन कबूतर|নোটন নোটন পায়রাগুলি ঝোটন বেঁধেছে,/ওপারেতে ছেলেমেয়ে নাইতে নেমেছে।/দুই ধারে দুই রুই কাতলা ভেসে উঠেছে,/কে দেখেছে কে দেখেছে দাদা দেখেছে।
+😴|bn|Baby is asleep|খোকা ঘুমালো|मुन्ना सो गया|খোকা ঘুমালো পাড়া জুড়ালো বর্গী এলো দেশে,/বুলবুলিতে ধান খেয়েছে খাজনা দেব কিসে?/ধান ফুরলো পান ফুরলো খাজনার উপায় কী?/আর ক'টা দিন সবুর কর রসুন বুনেছি।
+🏞️|bn|Our little river|আমাদের ছোট নদী|हमारी छोटी नदी|আমাদের ছোট নদী চলে বাঁকে বাঁকে,/বৈশাখ মাসে তার হাঁটু জল থাকে।/পার হয়ে যায় গরু, পার হয় গাড়ি,/দুই ধার উঁচু তার, ঢালু তার পাড়ি।/— রবীন্দ্রনাথ ঠাকুর
+🌴|bn|There is the palm tree|ঐ দেখা যায় তালগাছ|वो देखो ताड़ का पेड़|ঐ দেখা যায় তালগাছ, ঐ আমাদের গাঁ,/ঐখানেতে বাস করে কানা বগীর ছা।
+🌸|bn|The moon is up|চাঁদ উঠেছে ফুল ফুটেছে|चाँद निकला फूल खिले|চাঁদ উঠেছে ফুল ফুটেছে কদম তলায় কে?/হাতি নাচছে ঘোড়া নাচছে সোনামণির বে।
+🐎|bn|Mango leaves in pairs|আম পাতা জোড়া জোড়া|आम के पत्ते जोड़ी जोड़ी|আম পাতা জোড়া জোড়া,/মারব চাবুক চড়ব ঘোড়া।/ওরে বুবু সরে দাঁড়া,/আসছে আমার পাগলা ঘোড়া।/পাগলা ঘোড়া খেপেছে,/চাবুক ছুঁড়ে মেরেছে।
+⭐|en|Twinkle, Twinkle, Little Star|টুইঙ্কল টুইঙ্কল লিটল স্টার|ट्विंकल ट्विंकल लिटिल स्टार|Twinkle, twinkle, little star,/How I wonder what you are!/Up above the world so high,/Like a diamond in the sky./Twinkle, twinkle, little star,/How I wonder what you are!
+🐑|en|Baa, Baa, Black Sheep|বা বা ব্ল্যাক শিপ|बा बा ब्लैक शीप|Baa, baa, black sheep,/Have you any wool?/Yes sir, yes sir,/Three bags full!/One for the master,/And one for the dame,/And one for the little boy/Who lives down the lane.
+🥚|en|Humpty Dumpty|হাম্পটি ডাম্পটি|हम्प्टी डम्प्टी|Humpty Dumpty sat on a wall,/Humpty Dumpty had a great fall./All the king's horses and all the king's men/Couldn't put Humpty together again.
+🐭|en|Hickory Dickory Dock|হিকরি ডিকরি ডক|हिकरी डिकरी डॉक|Hickory, dickory, dock,/The mouse ran up the clock./The clock struck one,/The mouse ran down,/Hickory, dickory, dock.
+🚣|en|Row, Row, Row Your Boat|রো রো রো ইয়োর বোট|रो रो रो योर बोट|Row, row, row your boat,/Gently down the stream./Merrily, merrily, merrily, merrily,/Life is but a dream.
+🐟|hi|The fish is queen of the water|মাছ জলের রানি|मछली जल की रानी है|मछली जल की रानी है,/जीवन उसका पानी है।/हाथ लगाओ डर जाएगी,/बाहर निकालो मर जाएगी।
+🌝|hi|Uncle Moon far away|দূরের চাঁদ মামা|चंदा मामा दूर के|चंदा मामा दूर के,/पुए पकाएँ बूर के।/आप खाएँ थाली में,/मुन्ने को दें प्याली में।
+🥔|hi|Aloo Kachaloo|আলু কচালু|आलू कचालू|आलू कचालू बेटा कहाँ गए थे,/बंदर की टोकरी में सो रहे थे।/बंदर ने लात मारी रो रहे थे,/मम्मी ने प्यार किया हँस रहे थे।

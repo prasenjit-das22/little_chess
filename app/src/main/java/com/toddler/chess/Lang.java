@@ -6,8 +6,10 @@ import java.util.Locale;
 final class Lang {
     static final int EN = 0, BN = 1, HI = 2;
     static final String[] NAMES = {"English", "বাংলা", "हिन्दी"};
+    /** Order of the language buttons on the menu: Bengali first. */
+    static final int[] MENU_ORDER = {BN, EN, HI};
 
-    static int current = EN;
+    static int current = BN;
 
     private Lang() {}
 
@@ -29,19 +31,30 @@ final class Lang {
         }
     }
 
-    /** Counting words 1..5. */
+    private static final String[][] NUMBERS = {
+            {"One", "এক", "एक"}, {"Two", "দুই", "दो"}, {"Three", "তিন", "तीन"},
+            {"Four", "চার", "चार"}, {"Five", "পাঁচ", "पाँच"}, {"Six", "ছয়", "छह"},
+            {"Seven", "সাত", "सात"}, {"Eight", "আট", "आठ"}, {"Nine", "নয়", "नौ"},
+            {"Ten", "দশ", "दस"},
+    };
+
+    /** Counting words 1..10. */
     static String number(int n) {
-        String[][] words = {
-                {"One", "এক", "एक"}, {"Two", "দুই", "दो"}, {"Three", "তিন", "तीन"},
-                {"Four", "চার", "चार"}, {"Five", "পাঁচ", "पाँच"},
-        };
-        return t(words[n - 1]);
+        return t(NUMBERS[n - 1]);
     }
 
-    /** The digit as written in the current language's script. */
+    /** Counting word 1..10 in a given language. */
+    static String numberIn(int n, int lang) {
+        return NUMBERS[n - 1][lang];
+    }
+
+    /** The number as written in the current language's script. */
     static String digit(int n) {
-        String[] bn = {"০", "১", "২", "৩", "৪", "৫"};
-        String[] hi = {"०", "१", "२", "३", "४", "५"};
-        return current == BN ? bn[n] : current == HI ? hi[n] : String.valueOf(n);
+        String s = String.valueOf(n);
+        if (current == EN) return s;
+        char zero = current == BN ? '০' : '०';
+        StringBuilder b = new StringBuilder();
+        for (int i = 0; i < s.length(); i++) b.append((char) (zero + (s.charAt(i) - '0')));
+        return b.toString();
     }
 }

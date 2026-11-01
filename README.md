@@ -6,24 +6,33 @@ No ads, no internet, no in-app purchases, no permissions.
 
 ## What's inside
 
+বাংলা comes first: the app starts in Bengali, every card shows the Bengali word under the
+English (or the English under the Bengali), and there is a full Bengali alphabet and Bengali rhymes.
+
 | Tile | What it does |
 | --- | --- |
-| **Colors** | Red, orange, yellow, green, blue, purple, pink, brown, black, white, each with a matching thing ("Red! A red apple.") |
-| **Shapes** | Circle, square, triangle, star, heart, rectangle, oval, diamond, each with a smiley face |
-| **Animals** | 18 animals with their sounds ("Cow! Moo!" / "গরু! হাম্বা!" / "गाय! मूँ!") |
-| **Things** | Everyday objects, food, vehicles and nature words |
-| **Numbers** | Counting 1 to 5 out loud ("One... two... three... Three ducks!") |
-| **Chess pieces** | King, queen, rook, bishop, knight and pawn, in white and black |
-| **Chess board** | A real board in the starting position. Touching a piece says its colour and name ("Black knight!"). Pieces can be dragged anywhere; the green button puts them all back. |
-| **Chess moves** | "Catch the star": one piece on the board with green dots where it can go. Tap a dot to move it, and land on the star for a party. The arrow switches piece (rook, bishop, queen, king, knight, pawn), and each one explains its move ("The knight jumps like an L!"). |
+| **Animals / প্রাণী** | 100 animals, each with its sound or a fun fact ("গরু! হাম্বা!"), starting with the Royal Bengal tiger |
+| **Birds / পাখি** | 100 birds, Bengal's own first: দোয়েল, মাছরাঙা, শালিক, বুলবুলি, কোকিল, টুনটুনি, বাবুই... Birds without an emoji are drawn by the app |
+| **Bangla letters / বর্ণমালা** | All 50 letters, অ to ঁ, each with a picture word ("অ-তে অজগর"), always read in Bengali |
+| **Music / গান-বাজনা** | 14 instruments to play: piano, tabla, guitar, flute (বাঁশি), harmonium, sitar, ektara, dhak, conch (শাঁখ), violin, xylophone, bells, drums and trumpet. ▶ plays a song or rhythm (Teentaal, Kaharwa, Dadra on the tabla); ☝ "learn" mode shows a star on the next note so the child can play Twinkle Twinkle, Sa Re Ga Ma, Jingle Bells and more |
+| **Find it! / খুঁজে দেখো** | A game: three pictures and "বিড়াল কোথায়?". Topics change every round; stars for right answers |
+| **Colors, Shapes, Numbers** | 12 colours, 8 shapes, counting 1 to 10 (in ১ ২ ৩ in Bengali) |
+| **Food / খাবার** | 100 foods: fruits, vegetables, ভাত, ডাল, মুড়ি, বিরিয়ানি, sweets and drinks |
+| **Things / জিনিস** | 100 everyday things: toys, home, clothes, school, nature, places |
+| **Vehicles, My body** | 42 vehicles (Kolkata tram, yellow taxi, auto...) and 26 body parts and actions |
+| **ABC** | A for Apple to Z for Zebra, read in English |
+| **Rhymes / ছড়া** | 11 Bengali ছড়া (আয় আয় চাঁদ মামা, হাট্টিমা টিম টিম...), plus English and Hindi rhymes, each read in its own language |
+| **Chess pieces, board, moves** | The original chess corner |
 | **Surprise!** | A shuffled mix of everything |
 
 On a card, **tap the picture** to hear it again (with sparkles), **tap anywhere else or swipe** to go to the next one.
-The house button goes back to the menu.
+The orange button shuffles the deck, the house button goes back to the menu.
+
+The word lists live in `app/src/main/assets/*.txt` (one card per line), so more words are easy to add.
 
 ### For grown-ups
 
-* **Language:** tap English / বাংলা / हिन्दी on the menu. Words on screen and the voice both switch.
+* **Language:** tap বাংলা / English / हिन्दी on the menu (Bengali is the default). Words on screen and the voice both switch.
   Bengali and Hindi speech need the phone's Google text-to-speech voice for that language; if it is
   missing the app offers to open the download screen.
 
@@ -48,5 +57,6 @@ Needs the Android SDK (API 34) and JDK 17:
 # -> app/build/outputs/apk/release/app-release.apk
 ```
 
-The app is plain Java with no libraries. All pictures are drawn in code (chess pieces and shapes as
-vector paths, everything else as emoji), and the chimes are synthesised at startup.
+The app is plain Java with no libraries. All pictures are drawn in code (chess pieces, shapes and birds as
+vector paths, everything else as emoji), and every instrument sound is synthesised on the phone
+(plucked strings, tabla, bells and so on), so the APK stays small and works offline.

@@ -1,0 +1,43 @@
+# emoji | English | fact | Bengali | fact | Hindi | fact
+🚗|Car|Beep beep!|গাড়ি|পিপ পিপ!|गाड़ी|पीं पीं!
+🚕|Taxi|The yellow taxi of Kolkata!|ট্যাক্সি|কলকাতার হলুদ ট্যাক্সি!|टैक्सी|पीली टैक्सी!
+🛺|Auto rickshaw|Three wheels. Tuk tuk tuk!|অটো|তিন চাকা। ভটভট ভটভট!|ऑटो रिक्शा|तीन पहिए। टुक टुक!
+🚌|Bus|The wheels go round and round.|বাস|চাকা ঘোরে বনবন।|बस|पहिए घूमें गोल गोल।
+🚋|Tram|Ding ding! The Kolkata tram.|ট্রাম|টুং টুং! কলকাতার ট্রাম।|ट्राम|टन टन! कोलकाता की ट्राम।
+🚇|Metro|A train under the ground!|মেট্রো|মাটির নিচের ট্রেন!|मेट्रो|ज़मीन के नीचे की ट्रेन!
+🚂|Steam train|Choo choo! Puff puff!|রেলগাড়ি|কু ঝিক ঝিক!|रेलगाड़ी|छुक छुक छुक!
+🚆|Train|A long, long train.|ট্রেন|লম্বা লম্বা ট্রেন।|ट्रेन|लंबी लंबी ट्रेन।
+🚄|Fast train|Whoosh! So fast.|দ্রুতগামী ট্রেন|শোঁ করে ছুটে যায়!|तेज़ ट्रेन|सर्र से भागती है!
+🚙|Jeep|Bumpy road, here we go!|জিপ|উঁচু নিচু রাস্তায় চলে!|जीप|ऊबड़ खाबड़ रास्ते पर!
+🚐|Van|A van full of people.|ভ্যান|লোক ভর্তি ভ্যান।|वैन|लोगों से भरी वैन।
+🏎️|Race car|Vroom vroom! So fast.|রেসিং গাড়ি|ভ্রুম ভ্রুম! খুব জোরে।|रेस कार|व्रूम व्रूम! बहुत तेज़।
+🚓|Police car|Nee naw! Here comes the police.|পুলিশের গাড়ি|পুলিশ আসছে!|पुलिस गाड़ी|पुलिस आ रही है!
+🚑|Ambulance|It takes people to the doctor.|অ্যাম্বুলেন্স|অসুস্থ মানুষকে হাসপাতালে নিয়ে যায়।|एम्बुलेंस|बीमार को अस्पताल ले जाती है।
+🚒|Fire engine|It puts out fires. Splash!|দমকল|আগুন নেভায়!|दमकल|आग बुझाती है!
+🚚|Truck|It carries big boxes.|লরি|বড় বড় বাক্স বয়।|ट्रक|बड़े डिब्बे ढोता है।
+🛻|Pickup truck|A little truck.|পিকআপ|ছোট্ট মালগাড়ি।|पिकअप|छोटा ट्रक।
+🚜|Tractor|It works in the paddy field.|ট্রাক্টর|ধানখেতে কাজ করে।|ट्रैक्टर|खेत में काम करता है।
+🏍️|Motorbike|Vroom!|মোটরসাইকেল|ভটভট ভটভট!|मोटरसाइकिल|भट भट भट!
+🛵|Scooter|Off to the market!|স্কুটার|বাজারে চলো!|स्कूटर|बाज़ार चलो!
+🚲|Bicycle|Ring ring! Pedal pedal.|সাইকেল|ক্রিং ক্রিং! প্যাডেল করো।|साइकिल|ट्रिन ट्रिन! पैडल मारो।
+🛴|Kick scooter|Push with your foot!|স্কুটি|পা দিয়ে ঠেলো!|किक स्कूटर|पैर से धक्का दो!
+🛹|Skateboard|Roll roll!|স্কেটবোর্ড|গড়গড়িয়ে চলে!|स्केटबोर्ड|लुढ़कता चलता है!
+🛼|Roller skates|Wheels on your feet!|রোলার স্কেট|পায়ে চাকা!|रोलर स्केट|पैरों में पहिए!
+🚠|Cable car|Up the mountain on a rope.|রোপওয়ে|দড়ি বেয়ে পাহাড়ে ওঠে।|रोपवे|रस्सी से पहाड़ पर।
+✈️|Aeroplane|Zoom! Up in the sky.|উড়োজাহাজ|শোঁ শোঁ! আকাশে ওড়ে।|हवाई जहाज़|ज़ूम! आसमान में।
+🛩️|Small plane|A little plane.|ছোট বিমান|ছোট্ট উড়োজাহাজ।|छोटा विमान|छोटा हवाई जहाज़।
+🚁|Helicopter|Chop chop chop!|হেলিকপ্টার|ফটফট ফটফট!|हेलीकॉप्टर|फट फट फट!
+🚀|Rocket|Three, two, one... blast off!|রকেট|তিন, দুই, এক... উড়ে যাও!|रॉकेट|तीन, दो, एक... उड़ान!
+🛸|Flying saucer|A pretend spaceship!|উড়ন্ত চাকি|কল্পনার মহাকাশযান!|उड़न तश्तरी|कल्पना का यान!
+🪂|Parachute|Float down slowly.|প্যারাশুট|আস্তে আস্তে নামে।|पैराशूट|धीरे धीरे नीचे।
+⛵|Sailboat|The wind pushes the sail.|পালতোলা নৌকা|হাওয়ায় পাল ফোলে।|पाल वाली नाव|हवा से चलती है।
+🛶|Canoe|Paddle paddle.|ডিঙি নৌকা|দাঁড় বাও, দাঁড় বাও।|डोंगी|चप्पू चलाओ।
+🚤|Speedboat|Splash! So fast on water.|স্পিডবোট|জলে খুব জোরে ছোটে!|स्पीडबोट|पानी पर तेज़!
+⛴️|Ferry|Across the river to the other side.|লঞ্চ|নদী পার হয়।|फ़ेरी|नदी पार।
+🚢|Ship|A big ship on the sea.|জাহাজ|সমুদ্রে বড় জাহাজ।|जहाज़|समुद्र में बड़ा जहाज़।
+🛳️|Cruise ship|A floating hotel!|প্রমোদতরী|ভাসমান হোটেল!|क्रूज़ जहाज़|तैरता होटल!
+⚓|Anchor|The ship stops here.|নোঙর|জাহাজ থামে।|लंगर|जहाज़ रुकता है।
+🛞|Wheel|Round and round.|চাকা|গোল গোল চাকা।|पहिया|गोल गोल पहिया।
+🚦|Traffic light|Red stop, green go!|ট্রাফিক লাইট|লাল থামো, সবুজ চলো!|ट्रैफ़िक लाइट|लाल रुको, हरा चलो!
+🚏|Bus stop|Wait here for the bus.|বাস স্টপ|এখানে বাসের জন্য দাঁড়াও।|बस स्टॉप|यहाँ बस का इंतज़ार।
+⛽|Petrol pump|Fill up the car.|পেট্রল পাম্প|গাড়িতে তেল ভরো।|पेट्रोल पंप|गाड़ी में पेट्रोल।

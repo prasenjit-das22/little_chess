@@ -8,6 +8,7 @@ import android.graphics.RectF;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -53,7 +54,12 @@ final class FlashcardView extends PlayView {
         index = 0;
         slideDir = 0;
         bounceStart = now();
-        activity.speaker.say(items.get(index).speech);
+        speak();
+    }
+
+    private void speak() {
+        Item item = items.get(index);
+        activity.speaker.say(item.speech, item.speechLang);
     }
 
     private float buttonRadius() {
@@ -85,6 +91,17 @@ final class FlashcardView extends PlayView {
             activity.showHome();
             return;
         }
+        if (items.size() > 2 && dist(x, y, getWidth() - m, m) < r * 1.3f) {
+            Collections.shuffle(items);
+            index = 0;
+            slideDir = 1;
+            slideStart = now();
+            bounceStart = now() + 250;
+            burst(getWidth() - m, m);
+            activity.chimes.ding();
+            speak();
+            return;
+        }
         float by = getHeight() - m;
         if (dist(x, y, m, by) < r * 1.3f) {
             go(-1);
@@ -99,7 +116,7 @@ final class FlashcardView extends PlayView {
             bounceStart = now();
             burst(x, y);
             activity.chimes.ding();
-            activity.speaker.say(items.get(index).speech);
+            speak();
         } else {
             go(1);
         }
@@ -111,7 +128,7 @@ final class FlashcardView extends PlayView {
         slideStart = now();
         bounceStart = now() + 250;
         activity.chimes.next();
-        activity.speaker.say(items.get(index).speech);
+        speak();
     }
 
     private static float dist(float x1, float y1, float x2, float y2) {
@@ -153,29 +170,68 @@ final class FlashcardView extends PlayView {
 
         float breathe = 1 + 0.025f * (float) Math.sin(now() / 450.0);
         float scale = breathe + 0.18f * bounce(bounceStart, 700);
-        float s = itemSize(card);
-        float cx = card.centerX(), cy = itemY(card);
+        boolean hasText = item.text != null;
+        float s = hasText ? Math.min(card.width() * 0.4f, card.height() * 0.24f) : itemSize(card);
+        float cx = card.centerX(), cy = hasText ? card.top + card.height() * 0.17f : itemY(card);
         c.save();
         c.scale(scale, scale, cx, cy);
         item.painter.draw(c, cx, cy, s);
         c.restore();
 
-        float labelSize = Math.min(card.width() * 0.16f, card.height() * 0.13f);
-        Art.label(c, item.label, cx, card.bottom - card.height() * 0.14f, labelSize, item.labelColor);
+        boolean hasSub = item.sub != null && !item.sub.isEmpty() && !item.sub.equals(item.label);
+        if (hasText) {
+            float labelSize = Math.min(card.width() * 0.09f, card.height() * 0.06f);
+            float ly = card.top + card.height() * 0.345f;
+            Art.label(c, item.label, cx, ly, labelSize, item.labelColor);
+            if (hasSub) {
+                Art.text(c, item.sub, cx, ly + labelSize * 0.95f, labelSize * 0.5f,
+                        Color.rgb(130, 100, 150), card.width() * 0.85f);
+            }
+            drawText(c, item.text, card, card.top + card.height() * 0.45f, card.bottom - card.height() * 0.04f);
+        } else {
+            float labelSize = Math.min(card.width() * 0.16f, card.height() * 0.12f);
+            float ly = card.bottom - card.height() * (hasSub ? 0.17f : 0.14f);
+            Art.label(c, item.label, cx, ly, labelSize, item.labelColor);
+            if (hasSub) {
+                Art.text(c, item.sub, cx, card.bottom - card.height() * 0.065f, labelSize * 0.42f,
+                        Color.rgb(130, 100, 150), card.width() * 0.85f);
+            }
+        }
 
         float r = buttonRadius();
         float m = dp(16) + r;
         Art.homeButton(c, m, m, r);
         Art.arrowButton(c, m, h - m, r, -1);
         Art.arrowButton(c, w - m, h - m, r, 1);
+        if (items.size() > 2) Art.shuffleButton(c, w - m, m, r);
         drawProgress(c, w / 2f, h - m);
+    }
+
+    /** The lines of a rhyme, as big as fits between top and bottom. */
+    private void drawText(Canvas c, String text, RectF card, float top, float bottom) {
+        String[] lines = text.split("\n");
+        float lineH = Math.min((bottom - top) / lines.length, card.width() * 0.075f);
+        float size = lineH * 0.72f;
+        float y = top + ((bottom - top) - lineH * lines.length) / 2f + lineH / 2f;
+        for (String line : lines) {
+            Art.text(c, line, card.centerX(), y, size, Art.INK, card.width() * 0.88f);
+            y += lineH;
+        }
     }
 
     private void drawProgress(Canvas c, float cx, float cy) {
         int n = items.size();
         float avail = getWidth() - 4 * (dp(16) + buttonRadius());
         float gap = Math.min(dp(16), avail / n);
-        if (gap < dp(6)) return;
+        if (gap < dp(6) || n > 20) {
+            // Too many for dots: show "12 / 100" instead.
+            String count = Lang.digit(index + 1) + " / " + Lang.digit(n);
+            paint.setColor(Color.argb(170, 255, 255, 255));
+            float tw = Math.min(avail, dp(130));
+            c.drawRoundRect(cx - tw / 2f, cy - dp(20), cx + tw / 2f, cy + dp(20), dp(20), dp(20), paint);
+            Art.text(c, count, cx, cy, dp(20), Color.rgb(120, 90, 200), tw * 0.9f);
+            return;
+        }
         float left = cx - gap * (n - 1) / 2f;
         for (int i = 0; i < n; i++) {
             boolean on = i == index;

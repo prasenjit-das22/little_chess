@@ -22,6 +22,7 @@ public class MainActivity extends Activity {
 
     Speaker speaker;
     Chimes chimes;
+    SoundBank sounds;
     private HomeView home;
     private View current;
     private long lastBackPress;
@@ -31,10 +32,12 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        Lang.current = prefs().getInt(KEY_LANG, Lang.EN);
+        Data.init(this);
+        Lang.current = prefs().getInt(KEY_LANG, Lang.BN);
         speaker = new Speaker(this, lang -> runOnUiThread(() -> warnMissingVoice(lang)));
         speaker.setLanguage(Lang.current);
         chimes = new Chimes(this);
+        sounds = new SoundBank(this);
         home = new HomeView(this);
         showHome();
         speaker.say(greeting());
@@ -99,6 +102,25 @@ public class MainActivity extends Activity {
         view.start();
     }
 
+    void openMusic() {
+        MusicView view = new MusicView(this);
+        show(view);
+        speaker.say(Lang.t("Let's make music! Pick an instrument.", "চলো বাজাই! একটা বাদ্যযন্ত্র বেছে নাও।",
+                "चलो बजाएँ! एक वाद्य यंत्र चुनो।"));
+    }
+
+    void openInstrument(int kind) {
+        InstrumentView view = new InstrumentView(this, kind);
+        show(view);
+        view.start();
+    }
+
+    void openQuiz() {
+        QuizView view = new QuizView(this);
+        show(view);
+        view.start();
+    }
+
     void openMoves() {
         MovesView view = new MovesView(this);
         show(view);
@@ -112,6 +134,7 @@ public class MainActivity extends Activity {
     }
 
     private void show(View view) {
+        if (current instanceof InstrumentView) ((InstrumentView) current).stop();
         setContentView(view);
         current = view;
         hideSystemUi();
@@ -142,6 +165,10 @@ public class MainActivity extends Activity {
     @Override
     @SuppressWarnings("deprecation")
     public void onBackPressed() {
+        if (current instanceof InstrumentView) {
+            openMusic();
+            return;
+        }
         if (current != home) {
             showHome();
             return;
@@ -177,6 +204,7 @@ public class MainActivity extends Activity {
     protected void onPause() {
         super.onPause();
         speaker.stop();
+        if (current instanceof InstrumentView) ((InstrumentView) current).pause();
     }
 
     @Override
@@ -184,5 +212,6 @@ public class MainActivity extends Activity {
         super.onDestroy();
         speaker.shutdown();
         chimes.release();
+        sounds.release();
     }
 }

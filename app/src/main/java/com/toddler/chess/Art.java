@@ -177,6 +177,19 @@ final class Art {
         c.drawBitmap(b, null, RECT, BITMAP);
     }
 
+    /** A round badge with the first letter of a word, for pictures the phone cannot show. */
+    static void letterBadge(Canvas c, String word, float cx, float cy, float s) {
+        String first = word.isEmpty() ? "?" : word.substring(0, Character.charCount(word.codePointAt(0)));
+        FILL.setShader(new RadialGradient(cx - s * 0.15f, cy - s * 0.2f, s * 0.7f,
+                Color.rgb(255, 236, 179), Color.rgb(255, 179, 0), Shader.TileMode.CLAMP));
+        c.drawCircle(cx, cy, s / 2f, FILL);
+        FILL.setShader(null);
+        STROKE.setColor(INK);
+        STROKE.setStrokeWidth(s * 0.025f);
+        c.drawCircle(cx, cy, s / 2f, STROKE);
+        label(c, first, cx, cy, s * 0.55f, Color.rgb(216, 27, 96));
+    }
+
     /** Big bold text with a white halo so it reads on any background. */
     static void label(Canvas c, String text, float cx, float cy, float size, int color) {
         TEXT.setTextSize(size);
@@ -250,6 +263,32 @@ final class Art {
         p.close();
         FILL.setColor(Color.rgb(120, 90, 200));
         c.drawPath(p, FILL);
+    }
+
+    /** A round button with two crossing arrows, to shuffle the cards. */
+    static void shuffleButton(Canvas c, float cx, float cy, float r) {
+        roundButton(c, cx, cy, r);
+        float s = r * 0.5f;
+        int col = Color.rgb(255, 143, 0);
+        STROKE.setColor(col);
+        STROKE.setStrokeWidth(r * 0.13f);
+        Path p = new Path();
+        p.moveTo(cx - s, cy - s * 0.55f);
+        p.cubicTo(cx - s * 0.1f, cy - s * 0.55f, cx + s * 0.1f, cy + s * 0.55f, cx + s * 0.7f, cy + s * 0.55f);
+        c.drawPath(p, STROKE);
+        p.reset();
+        p.moveTo(cx - s, cy + s * 0.55f);
+        p.cubicTo(cx - s * 0.1f, cy + s * 0.55f, cx + s * 0.1f, cy - s * 0.55f, cx + s * 0.7f, cy - s * 0.55f);
+        c.drawPath(p, STROKE);
+        FILL.setColor(col);
+        for (int k = -1; k <= 1; k += 2) {
+            p.reset();
+            p.moveTo(cx + s * 1.1f, cy + k * s * 0.55f);
+            p.lineTo(cx + s * 0.6f, cy + k * s * 0.55f - s * 0.35f);
+            p.lineTo(cx + s * 0.6f, cy + k * s * 0.55f + s * 0.35f);
+            p.close();
+            c.drawPath(p, FILL);
+        }
     }
 
     /** A round button with a circular "start again" arrow. */
